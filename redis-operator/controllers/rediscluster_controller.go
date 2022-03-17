@@ -42,7 +42,7 @@ type RedisClusterReconciler struct {
 // Reconcile is part of the main kubernetes reconciliation loop
 func (r *RedisClusterReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
 	reqLogger := r.Log.WithValues("Request.Namespace", req.Namespace, "Request.Name", req.Name)
-	reqLogger.Info("Reconciling opstree redis Cluster controller")
+	reqLogger.Info("----------Reconciling opstree redis Cluster controller-----------")
 	instance := &redisv1beta1.RedisCluster{}
 
 	err := r.Client.Get(context.TODO(), req.NamespacedName, instance)

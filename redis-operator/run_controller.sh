@@ -4,5 +4,8 @@ pkill -9 redis-controller
 
 sleep 2s
 
+cd ./bin
 
-nohup ./bin/redis-controller > ./logs/redis-controller.log &
+nohup ./redis-controller > ../logs/redis-controller.log &
+
+cd -
