@@ -24,7 +24,7 @@ import (
 // RedisClusterSpec defines the desired state of RedisCluster
 type RedisClusterSpec struct {
 	// +kubebuilder:validation:Minimum=3
-	Size              int32                        `json:"clusterSize"`
+	Size              *int32                       `json:"clusterSize"`
 	KubernetesConfig  KubernetesConfig             `json:"kubernetesConfig"`
 	RedisLeader       RedisLeader                  `json:"redisLeader,omitempty"`
 	RedisFollower     RedisFollower                `json:"redisFollower,omitempty"`
@@ -41,19 +41,23 @@ type RedisClusterSpec struct {
 
 func (cr *RedisClusterSpec) GetReplicaCounts(t string) int32 {
 	replica := cr.Size
-	if t == "leader" && cr.RedisLeader.Replicas != 0 {
+	if nil == replica {
+		return 0
+	}
+
+	if t == "leader" && cr.RedisLeader.Replicas != nil {
 		replica = cr.RedisLeader.Replicas
-	} else if t == "follower" && cr.RedisFollower.Replicas != 0 {
+	} else if t == "follower" && cr.RedisFollower.Replicas != nil {
 		replica = cr.RedisFollower.Replicas
 	}
 
-	return replica
+	return *replica
 }
 
 // RedisLeader interface will have the redis leader configuration
 type RedisLeader struct {
 	// +kubebuilder:validation:Minimum=3
-	Replicas            int32                     `json:"replicas,omitempty"`
+	Replicas            *int32                    `json:"replicas,omitempty"`
 	RedisConfig         *RedisConfig              `json:"redisConfig,omitempty"`
 	Affinity            *corev1.Affinity          `json:"affinity,omitempty"`
 	PodDisruptionBudget *RedisPodDisruptionBudget `json:"pdb,omitempty"`
@@ -63,7 +67,7 @@ type RedisLeader struct {
 
 // RedisFollower interface will have the redis follower configuration
 type RedisFollower struct {
-	Replicas            int32                     `json:"replicas,omitempty"`
+	Replicas            *int32                    `json:"replicas,omitempty"`
 	RedisConfig         *RedisConfig              `json:"redisConfig,omitempty"`
 	Affinity            *corev1.Affinity          `json:"affinity,omitempty"`
 	PodDisruptionBudget *RedisPodDisruptionBudget `json:"pdb,omitempty"`

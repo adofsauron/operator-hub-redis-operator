@@ -121,22 +121,27 @@ func (r *RedisClusterReconciler) Reconcile(ctx context.Context, req ctrl.Request
 		if leaderCount != leaderReplicas {
 			reqLogger.Info("Not all leader are part of the cluster...", "Leaders.Count", leaderCount, "Instance.Size", leaderReplicas)
 			k8sutils.ExecuteRedisClusterCommand(instance)
-		} else {
-			if followerReplicas > 0 {
-				reqLogger.Info("All leader are part of the cluster, adding follower/replicas", "Leaders.Count", leaderCount, "Instance.Size", leaderReplicas, "Follower.Replicas", followerReplicas)
-				k8sutils.ExecuteRedisReplicationCommand(instance)
-			} else {
-				reqLogger.Info("no follower/replicas configured, skipping replication configuration", "Leaders.Count", leaderCount, "Leader.Size", leaderReplicas, "Follower.Replicas", followerReplicas)
-			}
+			return ctrl.Result{RequeueAfter: time.Second * 120}, nil
 		}
-	} else {
-		reqLogger.Info("Redis leader count is desired")
-		if k8sutils.CheckRedisClusterState(instance) >= int(totalReplicas)-1 {
-			reqLogger.Info("Redis leader is not desired, executing failover operation")
-			k8sutils.ExecuteFailoverOperation(instance)
+
+		if followerReplicas > 0 {
+			reqLogger.Info("All leader are part of the cluster, adding follower/replicas", "Leaders.Count", leaderCount, "Instance.Size", leaderReplicas, "Follower.Replicas", followerReplicas)
+			k8sutils.ExecuteRedisReplicationCommand(instance)
+			return ctrl.Result{RequeueAfter: time.Second * 120}, nil
 		}
+
+		reqLogger.Info("no follower/replicas configured, skipping replication configuration", "Leaders.Count", leaderCount, "Leader.Size", leaderReplicas, "Follower.Replicas", followerReplicas)
+		return ctrl.Result{RequeueAfter: time.Second * 10}, nil
+
+	}
+
+	reqLogger.Info("Redis leader count is desired")
+	if k8sutils.CheckRedisClusterState(instance) >= int(totalReplicas)-1 {
+		reqLogger.Info("Redis leader is not desired, executing failover operation")
+		k8sutils.ExecuteFailoverOperation(instance)
 		return ctrl.Result{RequeueAfter: time.Second * 120}, nil
 	}
+
 	reqLogger.Info("Will reconcile redis cluster operator in again 10 seconds")
 	return ctrl.Result{RequeueAfter: time.Second * 10}, nil
 }
