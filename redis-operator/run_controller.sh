@@ -1,8 +1,8 @@
 #!/bin/bash
 
-pkill redis-controller
+pkill -9 redis-controller
 
 sleep 2s
 
-./bin/redis-controller
 
+nohup ./bin/redis-controller > ./logs/redis-controller.log &
