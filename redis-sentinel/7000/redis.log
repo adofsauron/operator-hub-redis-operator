@@ -1,0 +1,344 @@
+99961:C 25 Mar 2022 11:02:06.748 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+99961:C 25 Mar 2022 11:02:06.748 # Redis version=6.2.3, bits=64, commit=00000000, modified=0, pid=99961, just started
+99961:C 25 Mar 2022 11:02:06.748 # Configuration loaded
+99961:M 25 Mar 2022 11:02:06.749 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+99961:M 25 Mar 2022 11:02:06.749 * monotonic clock: POSIX clock_gettime
+99961:M 25 Mar 2022 11:02:06.750 * Running mode=standalone, port=7000.
+99961:M 25 Mar 2022 11:02:06.750 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+99961:M 25 Mar 2022 11:02:06.750 # Server initialized
+99961:M 25 Mar 2022 11:02:06.750 * Ready to accept connections
+99961:M 25 Mar 2022 11:02:06.750 * The server is now ready to accept connections at ./redis.sock
+99961:M 25 Mar 2022 11:03:36.576 - Accepted 127.0.0.1:37614
+99961:M 25 Mar 2022 11:03:36.577 * Replica 127.0.0.1:7001 asks for synchronization
+99961:M 25 Mar 2022 11:03:36.577 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'b3895c9e5d6b2d3a395d947be721c8cab473c20c', my replication IDs are 'ea47e5db87bab24b4000da70cfa297aad9b34599' and '0000000000000000000000000000000000000000')
+99961:M 25 Mar 2022 11:03:36.577 * Replication backlog created, my new replication IDs are '198e5f0366ad7c64603c635bddb7f08a71b0520b' and '0000000000000000000000000000000000000000'
+99961:M 25 Mar 2022 11:03:36.577 * Delay next BGSAVE for diskless SYNC
+99961:M 25 Mar 2022 11:03:41.658 * Starting BGSAVE for SYNC with target: replicas sockets
+99961:M 25 Mar 2022 11:03:41.658 * Background RDB transfer started by pid 100086
+100086:C 25 Mar 2022 11:03:41.659 * RDB: 0 MB of memory used by copy-on-write
+99961:M 25 Mar 2022 11:03:41.659 # Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+99961:M 25 Mar 2022 11:03:41.660 * Background RDB transfer terminated with success
+99961:M 25 Mar 2022 11:03:41.660 * Streamed RDB transfer with replica 127.0.0.1:7001 succeeded (socket). Waiting for REPLCONF ACK from slave to enable streaming
+99961:M 25 Mar 2022 11:03:41.660 * Synchronization with replica 127.0.0.1:7001 succeeded
+99961:M 25 Mar 2022 11:04:34.372 - Accepted 127.0.0.1:37620
+99961:M 25 Mar 2022 11:04:34.373 - Client closed connection
+99961:M 25 Mar 2022 11:05:33.230 - Accepted 127.0.0.1:37624
+99961:M 25 Mar 2022 11:05:33.230 - Accepted 127.0.0.1:37622
+99961:M 25 Mar 2022 11:05:33.230 - Accepted 127.0.0.1:37628
+99961:M 25 Mar 2022 11:05:33.230 - Accepted 127.0.0.1:37630
+99961:M 25 Mar 2022 11:05:33.238 - Accepted 127.0.0.1:37632
+99961:M 25 Mar 2022 11:05:33.238 - Accepted 127.0.0.1:37634
+99961:M 25 Mar 2022 11:06:00.982 - Accepted 127.0.0.1:37664
+99961:M 25 Mar 2022 11:06:06.771 - Client closed connection
+99961:M 25 Mar 2022 11:15:47.535 - Accepted 127.0.0.1:37672
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37674
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37676
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37692
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37694
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37700
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37702
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37708
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37710
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37712
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37714
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37716
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37718
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37720
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37722
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37724
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37726
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37728
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37730
+99961:M 25 Mar 2022 11:15:47.536 - Accepted 127.0.0.1:37732
+99961:M 25 Mar 2022 11:15:47.537 - Accepted 127.0.0.1:37734
+99961:M 25 Mar 2022 11:15:47.537 - Accepted 127.0.0.1:37738
+99961:M 25 Mar 2022 11:15:47.538 - Accepted 127.0.0.1:37740
+99961:M 25 Mar 2022 11:15:47.538 - Accepted 127.0.0.1:37742
+99961:M 25 Mar 2022 11:15:47.538 - Accepted 127.0.0.1:37744
+99961:M 25 Mar 2022 11:15:47.538 - Accepted 127.0.0.1:37746
+99961:M 25 Mar 2022 11:15:47.538 - Accepted 127.0.0.1:37748
+99961:M 25 Mar 2022 11:15:47.538 - Accepted 127.0.0.1:37752
+99961:M 25 Mar 2022 11:15:47.538 - Accepted 127.0.0.1:37754
+99961:M 25 Mar 2022 11:15:47.538 - Accepted 127.0.0.1:37756
+99961:M 25 Mar 2022 11:15:47.538 - Accepted 127.0.0.1:37758
+99961:M 25 Mar 2022 11:15:47.538 - Accepted 127.0.0.1:37760
+99961:M 25 Mar 2022 11:15:47.538 - Accepted 127.0.0.1:37762
+99961:M 25 Mar 2022 11:15:47.539 - Accepted 127.0.0.1:37764
+99961:M 25 Mar 2022 11:15:47.540 - Accepted 127.0.0.1:37766
+99961:M 25 Mar 2022 11:15:47.540 - Accepted 127.0.0.1:37768
+99961:M 25 Mar 2022 11:15:47.540 - Accepted 127.0.0.1:37770
+99961:M 25 Mar 2022 11:15:47.540 - Accepted 127.0.0.1:37772
+99961:M 25 Mar 2022 11:15:47.540 - Accepted 127.0.0.1:37774
+99961:M 25 Mar 2022 11:15:47.541 - Accepted 127.0.0.1:37778
+99961:M 25 Mar 2022 11:15:47.541 - Accepted 127.0.0.1:37780
+99961:M 25 Mar 2022 11:15:47.541 - Accepted 127.0.0.1:37782
+99961:M 25 Mar 2022 11:15:47.541 - Accepted 127.0.0.1:37784
+99961:M 25 Mar 2022 11:15:47.541 - Accepted 127.0.0.1:37786
+99961:M 25 Mar 2022 11:15:47.541 - Accepted 127.0.0.1:37788
+99961:M 25 Mar 2022 11:15:47.541 - Accepted 127.0.0.1:37790
+99961:M 25 Mar 2022 11:15:47.541 - Accepted 127.0.0.1:37792
+99961:M 25 Mar 2022 11:15:47.541 - Accepted 127.0.0.1:37794
+99961:M 25 Mar 2022 11:15:47.541 - Accepted 127.0.0.1:37796
+99961:M 25 Mar 2022 11:15:47.541 - Accepted 127.0.0.1:37798
+99961:M 25 Mar 2022 11:15:47.541 - Accepted 127.0.0.1:37800
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37802
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37804
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37806
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37808
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37810
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37812
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37814
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37816
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37818
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37820
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37822
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37824
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37826
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37828
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37830
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37832
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37834
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37836
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37842
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37844
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37846
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37848
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37850
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37852
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37854
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37856
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37858
+99961:M 25 Mar 2022 11:15:47.542 - Accepted 127.0.0.1:37860
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37862
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37864
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37868
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37870
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37872
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37874
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37876
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37878
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37880
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37882
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37884
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37886
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37888
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37890
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37892
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37894
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37896
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37898
+99961:M 25 Mar 2022 11:15:47.543 - Accepted 127.0.0.1:37900
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37902
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37904
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37906
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37908
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37910
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37912
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37914
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37918
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37920
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37922
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37924
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37926
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37928
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37934
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37936
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37938
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37940
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37942
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37944
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37946
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37948
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37950
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37952
+99961:M 25 Mar 2022 11:15:47.544 - Accepted 127.0.0.1:37954
+99961:M 25 Mar 2022 11:15:47.545 - Accepted 127.0.0.1:37956
+99961:M 25 Mar 2022 11:15:47.545 - Accepted 127.0.0.1:37960
+99961:M 25 Mar 2022 11:15:47.545 - Accepted 127.0.0.1:37962
+99961:M 25 Mar 2022 11:15:47.545 - Accepted 127.0.0.1:37964
+99961:M 25 Mar 2022 11:15:47.545 - Accepted 127.0.0.1:37966
+99961:M 25 Mar 2022 11:15:47.545 - Accepted 127.0.0.1:37968
+99961:M 25 Mar 2022 11:15:47.545 - Accepted 127.0.0.1:37970
+99961:M 25 Mar 2022 11:15:47.545 - Client closed connection
+99961:M 25 Mar 2022 11:15:47.545 - Client closed connection
+99961:M 25 Mar 2022 11:15:47.545 - Client closed connection
+99961:M 25 Mar 2022 11:15:47.545 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.545 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.545 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.545 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.545 # Connection with replica client id #3 lost.
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.706 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.707 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.708 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.709 - Error writing to client: Broken pipe
+99961:M 25 Mar 2022 11:15:47.710 - Client closed connection
+99961:M 25 Mar 2022 11:15:47.710 - Client closed connection
+99961:M 25 Mar 2022 11:15:47.710 - Client closed connection
+99961:M 25 Mar 2022 11:15:49.550 - Accepted 127.0.0.1:38010
+99961:M 25 Mar 2022 11:15:49.550 - Accepted 127.0.0.1:38008
+99961:M 25 Mar 2022 11:15:49.550 - Accepted 127.0.0.1:38014
+99961:M 25 Mar 2022 11:15:49.550 - Accepted 127.0.0.1:38012
+99961:M 25 Mar 2022 11:15:49.614 - Accepted 127.0.0.1:38018
+99961:M 25 Mar 2022 11:15:49.614 - Accepted 127.0.0.1:38016
+99961:M 25 Mar 2022 11:15:54.477 - Accepted 127.0.0.1:38020
+99961:M 25 Mar 2022 11:15:54.477 - Client closed connection
+99961:M 25 Mar 2022 11:15:57.806 - Accepted 127.0.0.1:38022
+99961:M 25 Mar 2022 11:15:57.807 - Client closed connection
+99961:S 25 Mar 2022 11:15:59.608 * Before turning into a replica, using my own master parameters to synthesize a cached master: I may be able to synchronize with the new master with just a partial transfer.
+99961:S 25 Mar 2022 11:15:59.608 * Connecting to MASTER 127.0.0.1:7001
+99961:S 25 Mar 2022 11:15:59.609 * MASTER <-> REPLICA sync started
+99961:S 25 Mar 2022 11:15:59.609 * REPLICAOF 127.0.0.1:7001 enabled (user request from 'id=142 addr=127.0.0.1:38008 laddr=127.0.0.1:7000 fd=11 name=sentinel-95a08705-cmd age=10 idle=0 flags=x db=0 sub=0 psub=0 multi=4 qbuf=196 qbuf-free=40758 argv-mem=4 obl=45 oll=0 omem=0 tot-mem=61468 events=r cmd=exec user=default redir=-1')
+99961:S 25 Mar 2022 11:15:59.609 # CONFIG REWRITE executed with success.
+99961:S 25 Mar 2022 11:15:59.610 * Non blocking connect for SYNC fired the event.
+99961:S 25 Mar 2022 11:15:59.610 * Master replied to PING, replication can continue...
+99961:S 25 Mar 2022 11:15:59.612 * Trying a partial resynchronization (request 198e5f0366ad7c64603c635bddb7f08a71b0520b:463900).
+99961:S 25 Mar 2022 11:15:59.618 - Accepted 127.0.0.1:38026
+99961:S 25 Mar 2022 11:15:59.618 - Accepted 127.0.0.1:38028
+99961:S 25 Mar 2022 11:15:59.656 - Accepted 127.0.0.1:38030
+99961:S 25 Mar 2022 11:15:59.657 - Accepted 127.0.0.1:38032
+99961:S 25 Mar 2022 11:15:59.702 - Accepted 127.0.0.1:38034
+99961:S 25 Mar 2022 11:16:00.142 - Accepted 127.0.0.1:38036
+99961:S 25 Mar 2022 11:16:00.143 - Client closed connection
+99961:S 25 Mar 2022 11:16:02.444 - Accepted 127.0.0.1:38038
+99961:S 25 Mar 2022 11:16:02.445 - Client closed connection
+99961:S 25 Mar 2022 11:16:04.785 * Full resync from master: 20ef59ffb8b73962115f880a5a53fc7e0ff2a78f:124634
+99961:S 25 Mar 2022 11:16:04.785 * Discarding previously cached master state.
+99961:S 25 Mar 2022 11:16:04.786 * MASTER <-> REPLICA sync: receiving streamed RDB from master with EOF to disk
+99961:S 25 Mar 2022 11:16:04.786 * MASTER <-> REPLICA sync: Flushing old data
+99961:S 25 Mar 2022 11:16:04.786 * MASTER <-> REPLICA sync: Loading DB in memory
+99961:S 25 Mar 2022 11:16:04.787 * Loading RDB produced by version 6.2.3
+99961:S 25 Mar 2022 11:16:04.787 * RDB age 0 seconds
+99961:S 25 Mar 2022 11:16:04.787 * RDB memory usage when created 1.95 Mb
+99961:S 25 Mar 2022 11:16:04.787 * MASTER <-> REPLICA sync: Finished with success
+99961:S 25 Mar 2022 11:16:04.787 * Background append only file rewriting started by pid 101046
+99961:S 25 Mar 2022 11:16:04.825 * AOF rewrite child asks to stop sending diffs.
+101046:C 25 Mar 2022 11:16:04.825 * Parent agreed to stop sending diffs. Finalizing AOF...
+101046:C 25 Mar 2022 11:16:04.825 * Concatenating 0.00 MB of AOF diff received from parent.
+101046:C 25 Mar 2022 11:16:04.825 * SYNC append only file rewrite performed
+101046:C 25 Mar 2022 11:16:04.826 * AOF rewrite: 0 MB of memory used by copy-on-write
+99961:S 25 Mar 2022 11:16:04.879 * Background AOF rewrite terminated with success
+99961:S 25 Mar 2022 11:16:04.879 * Residual parent diff successfully flushed to the rewritten AOF (0.00 MB)
+99961:S 25 Mar 2022 11:16:04.880 * Background AOF rewrite finished successfully
+99961:S 25 Mar 2022 11:16:04.880 - Background AOF rewrite signal handler took 249us

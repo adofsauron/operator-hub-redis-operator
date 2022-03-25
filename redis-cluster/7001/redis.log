@@ -1,0 +1,673 @@
+24617:C 24 Mar 2022 16:28:10.295 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+24617:C 24 Mar 2022 16:28:10.295 # Redis version=6.2.3, bits=64, commit=00000000, modified=0, pid=24617, just started
+24617:C 24 Mar 2022 16:28:10.295 # Configuration loaded
+24617:M 24 Mar 2022 16:28:10.296 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+24617:M 24 Mar 2022 16:28:10.296 * monotonic clock: POSIX clock_gettime
+24617:M 24 Mar 2022 16:28:10.296 * Running mode=standalone, port=7001.
+24617:M 24 Mar 2022 16:28:10.296 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+24617:M 24 Mar 2022 16:28:10.296 # Server initialized
+24617:M 24 Mar 2022 16:28:10.297 * Ready to accept connections
+24617:M 24 Mar 2022 16:28:23.102 - Accepted 127.0.0.1:45368
+24617:M 24 Mar 2022 16:28:23.103 - Client closed connection
+24617:M 24 Mar 2022 16:28:35.888 - Accepted 127.0.0.1:45372
+24617:S 24 Mar 2022 16:28:35.888 * Before turning into a replica, using my own master parameters to synthesize a cached master: I may be able to synchronize with the new master with just a partial transfer.
+24617:S 24 Mar 2022 16:28:35.888 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:28:35.888 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:28:35.889 * REPLICAOF localhost:7000 enabled (user request from 'id=4 addr=127.0.0.1:45372 laddr=127.0.0.1:7001 fd=9 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=42 qbuf-free=40912 argv-mem=20 obl=0 oll=0 omem=0 tot-mem=61484 events=r cmd=slaveof user=default redir=-1')
+24617:S 24 Mar 2022 16:28:35.889 * Non blocking connect for SYNC fired the event.
+24617:S 24 Mar 2022 16:28:35.889 * Master replied to PING, replication can continue...
+24617:S 24 Mar 2022 16:28:35.889 - Client closed connection
+24617:S 24 Mar 2022 16:28:35.889 * Trying a partial resynchronization (request d254c8437668fabe34bfb5b1c3a089035795684e:1).
+24617:S 24 Mar 2022 16:28:40.529 * Full resync from master: 1e37e346053088c9471830857bd3a8d792242f5e:14
+24617:S 24 Mar 2022 16:28:40.529 * Discarding previously cached master state.
+24617:S 24 Mar 2022 16:28:40.529 * MASTER <-> REPLICA sync: receiving streamed RDB from master with EOF to disk
+24617:S 24 Mar 2022 16:28:40.530 * MASTER <-> REPLICA sync: Flushing old data
+24617:S 24 Mar 2022 16:28:40.530 * MASTER <-> REPLICA sync: Loading DB in memory
+24617:S 24 Mar 2022 16:28:40.533 * Loading RDB produced by version 6.2.3
+24617:S 24 Mar 2022 16:28:40.533 * RDB age 0 seconds
+24617:S 24 Mar 2022 16:28:40.533 * RDB memory usage when created 1.79 Mb
+24617:S 24 Mar 2022 16:28:40.533 * MASTER <-> REPLICA sync: Finished with success
+24617:S 24 Mar 2022 16:28:40.533 * Background append only file rewriting started by pid 24701
+24617:S 24 Mar 2022 16:28:40.560 - Accepted 127.0.0.1:45376
+24617:S 24 Mar 2022 16:28:40.561 - Client closed connection
+24617:S 24 Mar 2022 16:28:40.565 * AOF rewrite child asks to stop sending diffs.
+24701:C 24 Mar 2022 16:28:40.565 * Parent agreed to stop sending diffs. Finalizing AOF...
+24701:C 24 Mar 2022 16:28:40.565 * Concatenating 0.00 MB of AOF diff received from parent.
+24701:C 24 Mar 2022 16:28:40.565 * SYNC append only file rewrite performed
+24701:C 24 Mar 2022 16:28:40.566 * AOF rewrite: 0 MB of memory used by copy-on-write
+24617:S 24 Mar 2022 16:28:40.630 * Background AOF rewrite terminated with success
+24617:S 24 Mar 2022 16:28:40.630 * Residual parent diff successfully flushed to the rewritten AOF (0.00 MB)
+24617:S 24 Mar 2022 16:28:40.630 * Background AOF rewrite finished successfully
+24617:S 24 Mar 2022 16:28:40.630 - Background AOF rewrite signal handler took 111us
+24617:S 24 Mar 2022 16:33:10.052 - Accepted ::1:39250
+24617:S 24 Mar 2022 16:33:10.052 - Accepted ::1:39252
+24617:S 24 Mar 2022 16:33:39.428 - Accepted 127.0.0.1:45428
+24617:S 24 Mar 2022 16:33:39.429 - Client closed connection
+24617:S 24 Mar 2022 16:33:47.339 - Client closed connection
+24617:S 24 Mar 2022 16:33:47.339 # Connection with master lost.
+24617:S 24 Mar 2022 16:33:47.339 * Caching the disconnected master state.
+24617:S 24 Mar 2022 16:33:47.339 * Reconnecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:33:47.341 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:33:47.341 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:33:48.301 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:33:48.301 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:33:48.301 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:33:49.312 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:33:49.312 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:33:49.312 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:33:49.708 - Accepted 127.0.0.1:45448
+24617:S 24 Mar 2022 16:33:49.708 - Client closed connection
+24617:S 24 Mar 2022 16:33:50.323 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:33:50.323 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:33:50.323 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:33:51.332 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:33:51.333 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:33:51.333 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:33:51.411 - Accepted 127.0.0.1:45458
+24617:S 24 Mar 2022 16:33:51.412 - Client closed connection
+24617:S 24 Mar 2022 16:33:52.342 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:33:52.343 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:33:52.343 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:33:53.353 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:33:53.353 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:33:53.353 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:33:54.362 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:33:54.362 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:33:54.362 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:33:55.374 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:33:55.374 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:33:55.374 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:33:56.385 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:33:56.385 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:33:56.385 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:33:57.393 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:33:57.394 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:33:57.394 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:33:58.402 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:33:58.402 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:33:58.402 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:33:59.411 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:33:59.412 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:33:59.412 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:33:59.468 - Accepted 127.0.0.1:45508
+24617:S 24 Mar 2022 16:33:59.469 - Client closed connection
+24617:S 24 Mar 2022 16:34:00.420 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:00.421 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:00.421 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:01.428 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:01.428 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:01.428 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:02.195 - Accepted 127.0.0.1:45526
+24617:S 24 Mar 2022 16:34:02.196 - Client closed connection
+24617:S 24 Mar 2022 16:34:02.436 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:02.437 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:02.437 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:03.446 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:03.446 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:03.446 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:04.453 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:04.454 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:04.454 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:05.461 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:05.462 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:05.462 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:06.472 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:06.472 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:06.472 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:07.481 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:07.481 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:07.481 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:08.489 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:08.490 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:08.490 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:09.501 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:09.501 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:09.501 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:10.513 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:10.513 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:10.513 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:11.524 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:11.524 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:11.524 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:12.533 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:12.534 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:12.534 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:13.542 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:13.544 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:13.544 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:14.554 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:14.554 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:14.554 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:14.868 - Accepted 127.0.0.1:45602
+24617:S 24 Mar 2022 16:34:14.868 - Client closed connection
+24617:S 24 Mar 2022 16:34:15.568 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:15.568 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:15.568 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:16.578 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:16.578 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:16.579 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:17.588 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:17.588 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:17.588 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:18.598 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:18.598 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:18.599 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:19.608 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:19.608 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:19.608 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:20.617 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:20.617 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:20.617 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:21.574 - Accepted 127.0.0.1:45640
+24617:S 24 Mar 2022 16:34:21.574 - Client closed connection
+24617:S 24 Mar 2022 16:34:21.628 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:21.628 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:21.628 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:22.638 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:22.639 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:22.639 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:23.648 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:23.649 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:23.649 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:24.658 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:24.659 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:24.659 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:25.670 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:25.670 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:25.670 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:26.680 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:26.680 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:26.680 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:27.690 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:27.690 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:27.691 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:28.700 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:28.701 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:28.701 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:29.710 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:29.711 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:29.711 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:30.722 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:30.722 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:30.722 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:31.733 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:31.733 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:31.733 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:32.742 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:32.742 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:32.742 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:33.753 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:33.753 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:33.753 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:34.765 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:34.765 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:34.765 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:35.773 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:35.773 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:35.773 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:36.783 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:36.783 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:36.783 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:37.793 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:37.793 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:37.793 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:38.803 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:38.803 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:38.803 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:39.814 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:39.814 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:39.814 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:40.825 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:40.826 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:40.827 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:41.835 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:41.836 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:41.836 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:42.846 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:42.847 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:42.847 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:43.855 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:43.855 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:43.855 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:44.864 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:44.864 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:44.864 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:45.875 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:45.876 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:45.876 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:46.884 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:46.884 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:46.884 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:47.891 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:47.891 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:47.891 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:48.899 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:48.899 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:48.899 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:49.906 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:49.907 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:49.907 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:50.917 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:50.917 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:50.917 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:51.926 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:51.927 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:51.927 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:52.936 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:52.936 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:52.936 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:53.944 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:53.944 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:53.945 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:54.955 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:54.955 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:54.955 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:55.964 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:55.965 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:55.965 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:56.975 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:56.975 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:56.975 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:57.985 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:57.986 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:57.986 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:34:58.997 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:34:58.997 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:34:58.997 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:35:00.007 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:35:00.008 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:35:00.008 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:35:01.018 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:35:01.018 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:35:01.018 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:35:02.026 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:35:02.026 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:35:02.026 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:35:03.038 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:35:03.038 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:35:03.038 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:35:04.051 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:35:04.052 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:35:04.053 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:35:05.062 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:35:05.062 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:35:05.062 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:35:06.071 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:35:06.072 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:35:06.072 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:35:07.083 * Connecting to MASTER localhost:7000
+24617:S 24 Mar 2022 16:35:07.083 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:35:07.083 * Non blocking connect for SYNC fired the event.
+24617:S 24 Mar 2022 16:35:07.084 * Master replied to PING, replication can continue...
+24617:S 24 Mar 2022 16:35:07.084 * Trying a partial resynchronization (request 1e37e346053088c9471830857bd3a8d792242f5e:2870).
+24617:S 24 Mar 2022 16:35:12.845 * Full resync from master: ef28765e4129d695c704c1ed2d524e5bac72c610:425
+24617:S 24 Mar 2022 16:35:12.845 * Discarding previously cached master state.
+24617:S 24 Mar 2022 16:35:12.845 * MASTER <-> REPLICA sync: receiving streamed RDB from master with EOF to disk
+24617:S 24 Mar 2022 16:35:12.846 * MASTER <-> REPLICA sync: Flushing old data
+24617:S 24 Mar 2022 16:35:12.846 * MASTER <-> REPLICA sync: Loading DB in memory
+24617:S 24 Mar 2022 16:35:12.846 * Loading RDB produced by version 6.2.3
+24617:S 24 Mar 2022 16:35:12.846 * RDB age 0 seconds
+24617:S 24 Mar 2022 16:35:12.846 * RDB memory usage when created 1.83 Mb
+24617:S 24 Mar 2022 16:35:12.846 * MASTER <-> REPLICA sync: Finished with success
+24617:S 24 Mar 2022 16:35:12.847 * Background append only file rewriting started by pid 25562
+24617:S 24 Mar 2022 16:35:12.881 * AOF rewrite child asks to stop sending diffs.
+25562:C 24 Mar 2022 16:35:12.881 * Parent agreed to stop sending diffs. Finalizing AOF...
+25562:C 24 Mar 2022 16:35:12.881 * Concatenating 0.00 MB of AOF diff received from parent.
+25562:C 24 Mar 2022 16:35:12.881 * SYNC append only file rewrite performed
+25562:C 24 Mar 2022 16:35:12.882 * AOF rewrite: 0 MB of memory used by copy-on-write
+24617:S 24 Mar 2022 16:35:12.944 * Background AOF rewrite terminated with success
+24617:S 24 Mar 2022 16:35:12.944 * Residual parent diff successfully flushed to the rewritten AOF (0.00 MB)
+24617:S 24 Mar 2022 16:35:12.945 * Background AOF rewrite finished successfully
+24617:S 24 Mar 2022 16:35:12.945 - Background AOF rewrite signal handler took 190us
+24617:S 24 Mar 2022 16:36:12.270 - Client closed connection
+24617:S 24 Mar 2022 16:36:12.270 - Client closed connection
+24617:S 24 Mar 2022 16:36:24.238 - Accepted ::1:39754
+24617:S 24 Mar 2022 16:36:24.238 - Accepted ::1:39756
+24617:S 24 Mar 2022 16:38:45.379 - Accepted 127.0.0.1:45950
+24617:S 24 Mar 2022 16:38:45.379 - Client closed connection
+24617:S 24 Mar 2022 16:40:00.697 - Client closed connection
+24617:S 24 Mar 2022 16:40:00.697 - Client closed connection
+24617:S 24 Mar 2022 16:40:00.767 - Accepted ::1:39786
+24617:S 24 Mar 2022 16:40:00.767 - Accepted ::1:39788
+24617:S 24 Mar 2022 16:40:12.490 - Client closed connection
+24617:S 24 Mar 2022 16:40:12.490 - Client closed connection
+24617:S 24 Mar 2022 16:40:21.710 - Accepted ::1:39794
+24617:S 24 Mar 2022 16:40:21.710 - Accepted ::1:39796
+24617:S 24 Mar 2022 16:41:05.376 - Client closed connection
+24617:S 24 Mar 2022 16:41:05.376 - Client closed connection
+24617:S 24 Mar 2022 16:41:06.581 - Accepted ::1:39804
+24617:S 24 Mar 2022 16:41:06.581 - Accepted ::1:39806
+24617:S 24 Mar 2022 16:42:00.150 - Accepted ::1:39812
+24617:S 24 Mar 2022 16:42:00.150 - Accepted ::1:39814
+24617:S 24 Mar 2022 16:42:03.241 - Client closed connection
+24617:S 24 Mar 2022 16:42:03.241 - Client closed connection
+24617:S 24 Mar 2022 16:42:07.197 - Client closed connection
+24617:S 24 Mar 2022 16:42:07.197 - Client closed connection
+24617:S 24 Mar 2022 16:42:15.693 - Accepted ::1:39824
+24617:S 24 Mar 2022 16:42:15.693 - Accepted ::1:39826
+24617:S 24 Mar 2022 16:42:15.693 - Accepted ::1:39836
+24617:S 24 Mar 2022 16:42:15.693 - Accepted ::1:39832
+24617:S 24 Mar 2022 16:42:15.693 - Accepted ::1:39838
+24617:S 24 Mar 2022 16:42:15.693 - Accepted ::1:39840
+24617:M 24 Mar 2022 16:46:16.553 # Connection with master lost.
+24617:M 24 Mar 2022 16:46:16.553 * Caching the disconnected master state.
+24617:S 24 Mar 2022 16:46:16.553 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:46:16.553 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:46:16.553 * REPLICAOF 127.0.0.1:7000 enabled (user request from 'id=31 addr=[::1]:39836 laddr=[::1]:7001 fd=11 name=sentinel-6466d6d0-cmd age=241 idle=0 flags=x db=0 sub=0 psub=0 multi=4 qbuf=196 qbuf-free=40758 argv-mem=4 obl=45 oll=0 omem=0 tot-mem=61468 events=r cmd=exec user=default redir=-1')
+24617:S 24 Mar 2022 16:46:16.554 # CONFIG REWRITE executed with success.
+24617:S 24 Mar 2022 16:46:16.554 * Non blocking connect for SYNC fired the event.
+24617:S 24 Mar 2022 16:46:16.554 * Master replied to PING, replication can continue...
+24617:S 24 Mar 2022 16:46:16.554 * Trying a partial resynchronization (request ef28765e4129d695c704c1ed2d524e5bac72c610:74135).
+24617:S 24 Mar 2022 16:46:16.554 * Successful partial resynchronization with master.
+24617:S 24 Mar 2022 16:46:16.554 * MASTER <-> REPLICA sync: Master accepted a Partial Resynchronization.
+24617:S 24 Mar 2022 16:46:16.575 - Accepted ::1:39850
+24617:S 24 Mar 2022 16:46:16.575 - Accepted ::1:39852
+24617:S 24 Mar 2022 16:46:16.619 - Accepted ::1:39854
+24617:S 24 Mar 2022 16:46:16.626 - Accepted ::1:39856
+24617:S 24 Mar 2022 16:46:16.626 - Accepted ::1:39858
+24617:S 24 Mar 2022 16:46:16.676 - Accepted 127.0.0.1:46032
+24617:S 24 Mar 2022 16:46:16.676 - Accepted 127.0.0.1:46034
+24617:S 24 Mar 2022 16:46:16.717 - Accepted 127.0.0.1:46036
+24617:S 24 Mar 2022 16:46:16.717 - Accepted 127.0.0.1:46038
+24617:S 24 Mar 2022 16:46:26.670 - Accepted 127.0.0.1:46042
+24617:S 24 Mar 2022 16:46:26.670 - Accepted 127.0.0.1:46044
+24617:S 24 Mar 2022 16:47:05.590 - Client closed connection
+24617:S 24 Mar 2022 16:47:05.590 - Client closed connection
+24617:S 24 Mar 2022 16:47:05.590 - Client closed connection
+24617:S 24 Mar 2022 16:47:05.590 - Client closed connection
+24617:S 24 Mar 2022 16:47:05.590 - Client closed connection
+24617:S 24 Mar 2022 16:47:05.590 - Client closed connection
+24617:S 24 Mar 2022 16:47:05.590 - Client closed connection
+24617:S 24 Mar 2022 16:47:05.590 - Client closed connection
+24617:S 24 Mar 2022 16:47:05.601 - Client closed connection
+24617:S 24 Mar 2022 16:47:05.601 - Client closed connection
+24617:S 24 Mar 2022 16:47:05.601 - Client closed connection
+24617:S 24 Mar 2022 16:47:05.601 - Client closed connection
+24617:S 24 Mar 2022 16:47:20.849 - Accepted 127.0.0.1:46058
+24617:S 24 Mar 2022 16:47:20.849 - Accepted 127.0.0.1:46064
+24617:S 24 Mar 2022 16:47:20.849 - Accepted 127.0.0.1:46066
+24617:S 24 Mar 2022 16:47:20.849 - Accepted 127.0.0.1:46062
+24617:S 24 Mar 2022 16:47:20.849 - Accepted 127.0.0.1:46082
+24617:S 24 Mar 2022 16:47:20.850 - Accepted 127.0.0.1:46084
+24617:S 24 Mar 2022 16:47:20.850 - Accepted ::1:39906
+24617:S 24 Mar 2022 16:47:20.850 - Accepted ::1:39900
+24617:S 24 Mar 2022 16:47:20.850 - Accepted ::1:39896
+24617:S 24 Mar 2022 16:47:20.850 - Accepted ::1:39904
+24617:S 24 Mar 2022 16:47:20.850 - Accepted ::1:39898
+24617:S 24 Mar 2022 16:47:20.850 - Accepted ::1:39908
+24617:S 24 Mar 2022 16:48:00.082 - Client closed connection
+24617:S 24 Mar 2022 16:48:00.082 # Connection with master lost.
+24617:S 24 Mar 2022 16:48:00.082 * Caching the disconnected master state.
+24617:S 24 Mar 2022 16:48:00.082 * Reconnecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:00.082 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:00.082 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:00.488 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:00.488 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:00.488 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:01.505 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:01.505 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:01.505 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:02.520 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:02.520 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:02.521 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:03.530 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:03.530 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:03.530 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:04.541 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:04.541 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:04.541 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:05.554 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:05.554 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:05.554 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:06.564 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:06.565 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:06.565 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:07.574 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:07.574 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:07.574 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:08.585 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:08.585 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:08.585 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:09.592 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:09.592 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:09.592 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:10.602 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:10.602 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:10.602 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:10.948 - Accepted 127.0.0.1:46244
+24617:S 24 Mar 2022 16:48:10.949 - Client closed connection
+24617:S 24 Mar 2022 16:48:11.615 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:11.615 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:11.615 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:12.627 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:12.627 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:12.627 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:13.637 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:13.637 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:13.637 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:14.647 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:14.648 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:14.648 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:15.656 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:15.656 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:15.656 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:16.666 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:16.666 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:16.666 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:17.674 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:17.674 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:17.674 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:18.683 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:18.683 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:18.683 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:19.694 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:19.694 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:19.694 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:20.706 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:20.706 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:20.706 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:21.718 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:21.718 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:21.718 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:22.731 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:22.731 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:22.731 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:23.739 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:23.739 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:23.739 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:24.749 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:24.750 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:24.750 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:25.760 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:25.760 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:25.760 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:26.773 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:26.773 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:26.773 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:27.786 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:27.786 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:27.786 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:28.796 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:28.797 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:28.797 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:29.809 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:29.809 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:29.809 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:30.822 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:30.822 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:30.822 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:31.836 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:31.836 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:31.836 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:32.845 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:32.845 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:32.845 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:33.857 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:33.857 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:33.857 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:34.869 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:34.869 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:34.870 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:35.882 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:35.882 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:35.882 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:36.893 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:36.893 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:36.893 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:37.904 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:37.904 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:37.904 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:38.914 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:38.914 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:38.914 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:39.923 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:39.924 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:39.924 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:40.937 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:40.937 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:40.937 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:41.948 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:41.948 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:41.948 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:42.961 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:42.961 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:42.961 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:43.972 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:43.973 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:43.973 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:44.985 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:44.985 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:44.985 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:45.993 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:45.994 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:45.994 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:47.007 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:47.007 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:47.007 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:48.015 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:48.015 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:48.015 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:49.023 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:49.023 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:49.023 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:50.032 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:50.032 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:50.032 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:51.041 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:51.041 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:51.041 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:52.052 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:52.053 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:52.053 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:53.065 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:53.065 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:53.065 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:54.073 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:54.073 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:54.073 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:55.085 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:55.085 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:55.085 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:56.095 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:56.095 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:56.095 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:57.106 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:57.106 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:57.106 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:58.114 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:58.114 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:58.114 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:48:59.126 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:48:59.127 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:48:59.127 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:00.137 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:00.138 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:00.138 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:01.150 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:01.151 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:01.151 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:02.163 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:02.163 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:02.163 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:03.174 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:03.174 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:03.174 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:04.184 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:04.184 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:04.184 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:05.194 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:05.194 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:05.194 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:06.205 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:06.206 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:06.206 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:07.218 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:07.218 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:07.218 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:08.232 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:08.232 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:08.232 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:09.244 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:09.244 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:09.244 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:10.257 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:10.257 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:10.257 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:11.270 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:11.270 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:11.270 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:12.281 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:12.282 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:12.282 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:13.294 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:13.294 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:13.294 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:14.303 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:14.303 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:14.303 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:15.316 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:15.316 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:15.316 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:16.328 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:16.328 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:16.328 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:17.339 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:17.339 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:17.339 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:18.349 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:18.349 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:18.349 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:19.361 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:19.361 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:19.361 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:20.372 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:20.372 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:20.372 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:21.384 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:21.385 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:21.385 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:22.397 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:22.397 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:22.397 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:23.411 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:23.411 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:23.411 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:24.423 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:24.423 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:24.423 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:25.434 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:25.435 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:25.435 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:26.445 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:26.445 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:26.445 # Error condition on socket for SYNC: Connection refused
+24617:S 24 Mar 2022 16:49:27.458 * Connecting to MASTER 127.0.0.1:7000
+24617:S 24 Mar 2022 16:49:27.458 * MASTER <-> REPLICA sync started
+24617:S 24 Mar 2022 16:49:27.459 # Error condition on socket for SYNC: Connection refused
+24617:signal-handler (1648111767) Received SIGTERM scheduling shutdown...
+24617:S 24 Mar 2022 16:49:27.965 # User requested shutdown...
+24617:S 24 Mar 2022 16:49:27.965 * Calling fsync() on the AOF file.
+24617:S 24 Mar 2022 16:49:27.965 * Saving the final RDB snapshot before exiting.
+24617:S 24 Mar 2022 16:49:27.967 * DB saved on disk
+24617:S 24 Mar 2022 16:49:27.967 * Removing the pid file.
+24617:S 24 Mar 2022 16:49:27.967 # Redis is now ready to exit, bye bye...

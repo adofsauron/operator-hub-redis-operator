@@ -1,0 +1,23 @@
+100219:X 25 Mar 2022 11:05:33.223 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+100219:X 25 Mar 2022 11:05:33.224 # Redis version=6.2.3, bits=64, commit=00000000, modified=0, pid=100219, just started
+100219:X 25 Mar 2022 11:05:33.224 # Configuration loaded
+100219:X 25 Mar 2022 11:05:33.224 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+100219:X 25 Mar 2022 11:05:33.224 * monotonic clock: POSIX clock_gettime
+100219:X 25 Mar 2022 11:05:33.225 * Running mode=sentinel, port=26380.
+100219:X 25 Mar 2022 11:05:33.225 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+100219:X 25 Mar 2022 11:05:33.229 # Sentinel ID is 95a08705782d95dd7435f405e3a7a80e56b724f5
+100219:X 25 Mar 2022 11:05:33.229 # +monitor master setmaster 127.0.0.1 7000 quorum 2
+100219:X 25 Mar 2022 11:05:33.230 * +slave slave 127.0.0.1:7001 127.0.0.1 7001 @ setmaster 127.0.0.1 7000
+100219:X 25 Mar 2022 11:05:35.282 * +sentinel sentinel 207b0310fe65f7e39ed3d0534f7d37727b779544 127.0.0.1 26379 @ setmaster 127.0.0.1 7000
+100219:X 25 Mar 2022 11:05:35.284 * +sentinel sentinel 66fe58dee1360b35f011a64a3a220cfa10820dec 127.0.0.1 26381 @ setmaster 127.0.0.1 7000
+100219:X 25 Mar 2022 11:09:38.368 # +sdown master setmaster 127.0.0.1 7000
+100219:X 25 Mar 2022 11:09:38.563 # +new-epoch 1
+100219:X 25 Mar 2022 11:09:38.566 # +vote-for-leader 66fe58dee1360b35f011a64a3a220cfa10820dec 1
+100219:X 25 Mar 2022 11:09:39.436 # +odown master setmaster 127.0.0.1 7000 #quorum 3/2
+100219:X 25 Mar 2022 11:09:39.436 # Next failover delay: I will not start a failover before Fri Mar 25 11:17:38 2022
+100219:X 25 Mar 2022 11:09:39.688 # +config-update-from sentinel 66fe58dee1360b35f011a64a3a220cfa10820dec 127.0.0.1 26381 @ setmaster 127.0.0.1 7000
+100219:X 25 Mar 2022 11:09:39.688 # +switch-master setmaster 127.0.0.1 7000 127.0.0.1 7001
+100219:X 25 Mar 2022 11:09:39.688 * +slave slave 127.0.0.1:7000 127.0.0.1 7000 @ setmaster 127.0.0.1 7001
+100219:X 25 Mar 2022 11:09:41.769 # +sdown slave 127.0.0.1:7000 127.0.0.1 7000 @ setmaster 127.0.0.1 7001
+100219:X 25 Mar 2022 11:15:49.606 # -sdown slave 127.0.0.1:7000 127.0.0.1 7000 @ setmaster 127.0.0.1 7001
+100219:X 25 Mar 2022 11:15:59.608 * +convert-to-slave slave 127.0.0.1:7000 127.0.0.1 7000 @ setmaster 127.0.0.1 7001

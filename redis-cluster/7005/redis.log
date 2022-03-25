@@ -1,0 +1,16 @@
+24641:C 24 Mar 2022 16:28:10.303 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+24641:C 24 Mar 2022 16:28:10.303 # Redis version=6.2.3, bits=64, commit=00000000, modified=0, pid=24641, just started
+24641:C 24 Mar 2022 16:28:10.303 # Configuration loaded
+24641:M 24 Mar 2022 16:28:10.304 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+24641:M 24 Mar 2022 16:28:10.304 * monotonic clock: POSIX clock_gettime
+24641:M 24 Mar 2022 16:28:10.304 * Running mode=standalone, port=7005.
+24641:M 24 Mar 2022 16:28:10.304 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+24641:M 24 Mar 2022 16:28:10.304 # Server initialized
+24641:M 24 Mar 2022 16:28:10.304 * Ready to accept connections
+24641:signal-handler (1648111767) Received SIGTERM scheduling shutdown...
+24641:M 24 Mar 2022 16:49:28.039 # User requested shutdown...
+24641:M 24 Mar 2022 16:49:28.039 * Calling fsync() on the AOF file.
+24641:M 24 Mar 2022 16:49:28.039 * Saving the final RDB snapshot before exiting.
+24641:M 24 Mar 2022 16:49:28.039 * DB saved on disk
+24641:M 24 Mar 2022 16:49:28.039 * Removing the pid file.
+24641:M 24 Mar 2022 16:49:28.039 # Redis is now ready to exit, bye bye...

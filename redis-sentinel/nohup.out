@@ -1,0 +1,22 @@
+25486:C 24 Mar 2022 16:34:47.493 # Fatal error, can't open config file '/root/work/redis/sentinel/./redis.conf': No such file or directory
+26028:X 24 Mar 2022 16:38:40.877 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+26028:X 24 Mar 2022 16:38:40.877 # Redis version=6.2.3, bits=64, commit=00000000, modified=0, pid=26028, just started
+26028:X 24 Mar 2022 16:38:40.877 # Configuration loaded
+26030:X 24 Mar 2022 16:38:40.877 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+26029:X 24 Mar 2022 16:38:40.877 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+26029:X 24 Mar 2022 16:38:40.877 # Redis version=6.2.3, bits=64, commit=00000000, modified=0, pid=26029, just started
+26029:X 24 Mar 2022 16:38:40.877 # Configuration loaded
+26030:X 24 Mar 2022 16:38:40.877 # Redis version=6.2.3, bits=64, commit=00000000, modified=0, pid=26030, just started
+26030:X 24 Mar 2022 16:38:40.877 # Configuration loaded
+26028:X 24 Mar 2022 16:38:40.878 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+26028:X 24 Mar 2022 16:38:40.878 * monotonic clock: POSIX clock_gettime
+26028:X 24 Mar 2022 16:38:40.878 # Warning: Could not create server TCP listening socket *:26379: bind: Address already in use
+26028:X 24 Mar 2022 16:38:40.878 # Failed listening on port 26379 (TCP), aborting.
+26029:X 24 Mar 2022 16:38:40.878 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+26030:X 24 Mar 2022 16:38:40.878 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+26030:X 24 Mar 2022 16:38:40.878 * monotonic clock: POSIX clock_gettime
+26029:X 24 Mar 2022 16:38:40.878 * monotonic clock: POSIX clock_gettime
+26030:X 24 Mar 2022 16:38:40.878 # Warning: Could not create server TCP listening socket *:26379: bind: Address already in use
+26029:X 24 Mar 2022 16:38:40.878 # Warning: Could not create server TCP listening socket *:26379: bind: Address already in use
+26029:X 24 Mar 2022 16:38:40.878 # Failed listening on port 26379 (TCP), aborting.
+26030:X 24 Mar 2022 16:38:40.878 # Failed listening on port 26379 (TCP), aborting.

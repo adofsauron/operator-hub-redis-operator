@@ -1,0 +1,31 @@
+100220:X 25 Mar 2022 11:05:33.224 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+100220:X 25 Mar 2022 11:05:33.224 # Redis version=6.2.3, bits=64, commit=00000000, modified=0, pid=100220, just started
+100220:X 25 Mar 2022 11:05:33.224 # Configuration loaded
+100220:X 25 Mar 2022 11:05:33.225 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+100220:X 25 Mar 2022 11:05:33.225 * monotonic clock: POSIX clock_gettime
+100220:X 25 Mar 2022 11:05:33.225 * Running mode=sentinel, port=26381.
+100220:X 25 Mar 2022 11:05:33.225 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+100220:X 25 Mar 2022 11:05:33.229 # Sentinel ID is 66fe58dee1360b35f011a64a3a220cfa10820dec
+100220:X 25 Mar 2022 11:05:33.229 # +monitor master setmaster 127.0.0.1 7000 quorum 2
+100220:X 25 Mar 2022 11:05:33.230 * +slave slave 127.0.0.1:7001 127.0.0.1 7001 @ setmaster 127.0.0.1 7000
+100220:X 25 Mar 2022 11:05:35.283 * +sentinel sentinel 207b0310fe65f7e39ed3d0534f7d37727b779544 127.0.0.1 26379 @ setmaster 127.0.0.1 7000
+100220:X 25 Mar 2022 11:05:35.288 * +sentinel sentinel 95a08705782d95dd7435f405e3a7a80e56b724f5 127.0.0.1 26380 @ setmaster 127.0.0.1 7000
+100220:X 25 Mar 2022 11:09:38.501 # +sdown master setmaster 127.0.0.1 7000
+100220:X 25 Mar 2022 11:09:38.560 # +odown master setmaster 127.0.0.1 7000 #quorum 2/2
+100220:X 25 Mar 2022 11:09:38.560 # +new-epoch 1
+100220:X 25 Mar 2022 11:09:38.560 # +try-failover master setmaster 127.0.0.1 7000
+100220:X 25 Mar 2022 11:09:38.562 # +vote-for-leader 66fe58dee1360b35f011a64a3a220cfa10820dec 1
+100220:X 25 Mar 2022 11:09:38.566 # 95a08705782d95dd7435f405e3a7a80e56b724f5 voted for 66fe58dee1360b35f011a64a3a220cfa10820dec 1
+100220:X 25 Mar 2022 11:09:38.568 # 207b0310fe65f7e39ed3d0534f7d37727b779544 voted for 66fe58dee1360b35f011a64a3a220cfa10820dec 1
+100220:X 25 Mar 2022 11:09:38.634 # +elected-leader master setmaster 127.0.0.1 7000
+100220:X 25 Mar 2022 11:09:38.634 # +failover-state-select-slave master setmaster 127.0.0.1 7000
+100220:X 25 Mar 2022 11:09:38.686 # +selected-slave slave 127.0.0.1:7001 127.0.0.1 7001 @ setmaster 127.0.0.1 7000
+100220:X 25 Mar 2022 11:09:38.686 * +failover-state-send-slaveof-noone slave 127.0.0.1:7001 127.0.0.1 7001 @ setmaster 127.0.0.1 7000
+100220:X 25 Mar 2022 11:09:38.739 * +failover-state-wait-promotion slave 127.0.0.1:7001 127.0.0.1 7001 @ setmaster 127.0.0.1 7000
+100220:X 25 Mar 2022 11:09:39.597 # +promoted-slave slave 127.0.0.1:7001 127.0.0.1 7001 @ setmaster 127.0.0.1 7000
+100220:X 25 Mar 2022 11:09:39.597 # +failover-state-reconf-slaves master setmaster 127.0.0.1 7000
+100220:X 25 Mar 2022 11:09:39.685 # +failover-end master setmaster 127.0.0.1 7000
+100220:X 25 Mar 2022 11:09:39.685 # +switch-master setmaster 127.0.0.1 7000 127.0.0.1 7001
+100220:X 25 Mar 2022 11:09:39.685 * +slave slave 127.0.0.1:7000 127.0.0.1 7000 @ setmaster 127.0.0.1 7001
+100220:X 25 Mar 2022 11:09:41.745 # +sdown slave 127.0.0.1:7000 127.0.0.1 7000 @ setmaster 127.0.0.1 7001
+100220:X 25 Mar 2022 11:15:49.667 # -sdown slave 127.0.0.1:7000 127.0.0.1 7000 @ setmaster 127.0.0.1 7001

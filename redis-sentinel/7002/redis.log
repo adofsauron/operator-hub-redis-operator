@@ -1,0 +1,50 @@
+97724:C 25 Mar 2022 10:28:57.926 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+97724:C 25 Mar 2022 10:28:57.926 # Redis version=6.2.3, bits=64, commit=00000000, modified=0, pid=97724, just started
+97724:C 25 Mar 2022 10:28:57.926 # Configuration loaded
+97724:M 25 Mar 2022 10:28:57.926 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+97724:M 25 Mar 2022 10:28:57.926 * monotonic clock: POSIX clock_gettime
+97724:M 25 Mar 2022 10:28:57.927 * Running mode=standalone, port=7002.
+97724:M 25 Mar 2022 10:28:57.927 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+97724:M 25 Mar 2022 10:28:57.927 # Server initialized
+97724:M 25 Mar 2022 10:28:57.928 * Ready to accept connections
+97724:M 25 Mar 2022 10:29:18.149 - Accepted 127.0.0.1:48840
+97724:S 25 Mar 2022 10:29:18.149 * Before turning into a replica, using my own master parameters to synthesize a cached master: I may be able to synchronize with the new master with just a partial transfer.
+97724:S 25 Mar 2022 10:29:18.150 * Connecting to MASTER 127.0.0.1:7000
+97724:S 25 Mar 2022 10:29:18.150 * MASTER <-> REPLICA sync started
+97724:S 25 Mar 2022 10:29:18.150 * REPLICAOF 127.0.0.1:7000 enabled (user request from 'id=3 addr=127.0.0.1:48840 laddr=127.0.0.1:7002 fd=9 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=42 qbuf-free=40912 argv-mem=20 obl=0 oll=0 omem=0 tot-mem=61484 events=r cmd=slaveof user=default redir=-1')
+97724:S 25 Mar 2022 10:29:18.150 * Non blocking connect for SYNC fired the event.
+97724:S 25 Mar 2022 10:29:18.150 * Master replied to PING, replication can continue...
+97724:S 25 Mar 2022 10:29:18.150 - Client closed connection
+97724:S 25 Mar 2022 10:29:18.151 * Trying a partial resynchronization (request 656086257be07877e8badee7c2706160a9974666:1).
+97724:S 25 Mar 2022 10:29:23.505 * Full resync from master: be4dc88516b324dfe7cb4449f209d0e22b96320d:19607
+97724:S 25 Mar 2022 10:29:23.505 * Discarding previously cached master state.
+97724:S 25 Mar 2022 10:29:23.505 * MASTER <-> REPLICA sync: receiving streamed RDB from master with EOF to disk
+97724:S 25 Mar 2022 10:29:23.506 * MASTER <-> REPLICA sync: Flushing old data
+97724:S 25 Mar 2022 10:29:23.506 * MASTER <-> REPLICA sync: Loading DB in memory
+97724:S 25 Mar 2022 10:29:23.507 * Loading RDB produced by version 6.2.3
+97724:S 25 Mar 2022 10:29:23.507 * RDB age 0 seconds
+97724:S 25 Mar 2022 10:29:23.507 * RDB memory usage when created 1.97 Mb
+97724:S 25 Mar 2022 10:29:23.507 * MASTER <-> REPLICA sync: Finished with success
+97724:S 25 Mar 2022 10:29:23.507 * Background append only file rewriting started by pid 97755
+97724:S 25 Mar 2022 10:29:23.546 * AOF rewrite child asks to stop sending diffs.
+97755:C 25 Mar 2022 10:29:23.546 * Parent agreed to stop sending diffs. Finalizing AOF...
+97755:C 25 Mar 2022 10:29:23.546 * Concatenating 0.00 MB of AOF diff received from parent.
+97755:C 25 Mar 2022 10:29:23.546 * SYNC append only file rewrite performed
+97755:C 25 Mar 2022 10:29:23.546 * AOF rewrite: 0 MB of memory used by copy-on-write
+97724:S 25 Mar 2022 10:29:23.562 * Background AOF rewrite terminated with success
+97724:S 25 Mar 2022 10:29:23.562 * Residual parent diff successfully flushed to the rewritten AOF (0.00 MB)
+97724:S 25 Mar 2022 10:29:23.562 * Background AOF rewrite finished successfully
+97724:S 25 Mar 2022 10:29:23.562 - Background AOF rewrite signal handler took 167us
+97724:S 25 Mar 2022 10:29:24.071 - Accepted 127.0.0.1:48844
+97724:S 25 Mar 2022 10:29:24.072 - Accepted 127.0.0.1:48846
+97724:S 25 Mar 2022 10:29:24.072 - Accepted 127.0.0.1:48848
+97724:S 25 Mar 2022 10:29:24.072 - Accepted 127.0.0.1:48850
+97724:S 25 Mar 2022 10:29:24.081 - Accepted 127.0.0.1:48852
+97724:S 25 Mar 2022 10:29:24.081 - Accepted 127.0.0.1:48854
+97724:signal-handler (1648176329) Received SIGTERM scheduling shutdown...
+97724:S 25 Mar 2022 10:45:29.235 - Client closed connection
+97724:S 25 Mar 2022 10:45:29.235 - Client closed connection
+97724:S 25 Mar 2022 10:45:29.245 # User requested shutdown...
+97724:S 25 Mar 2022 10:45:29.246 * Calling fsync() on the AOF file.
+97724:S 25 Mar 2022 10:45:29.246 * Removing the pid file.
+97724:S 25 Mar 2022 10:45:29.246 # Redis is now ready to exit, bye bye...

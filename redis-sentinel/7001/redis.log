@@ -1,0 +1,89 @@
+99963:C 25 Mar 2022 11:02:06.749 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+99963:C 25 Mar 2022 11:02:06.749 # Redis version=6.2.3, bits=64, commit=00000000, modified=0, pid=99963, just started
+99963:C 25 Mar 2022 11:02:06.749 # Configuration loaded
+99963:M 25 Mar 2022 11:02:06.750 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+99963:M 25 Mar 2022 11:02:06.750 * monotonic clock: POSIX clock_gettime
+99963:M 25 Mar 2022 11:02:06.751 * Running mode=standalone, port=7001.
+99963:M 25 Mar 2022 11:02:06.751 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+99963:M 25 Mar 2022 11:02:06.751 # Server initialized
+99963:M 25 Mar 2022 11:02:06.751 * Ready to accept connections
+99963:M 25 Mar 2022 11:02:09.647 - Accepted 127.0.0.1:44762
+99963:M 25 Mar 2022 11:02:09.647 - Client closed connection
+99963:M 25 Mar 2022 11:03:20.391 - Accepted 127.0.0.1:44768
+99963:M 25 Mar 2022 11:03:22.294 - Client closed connection
+99963:M 25 Mar 2022 11:03:36.575 - Accepted 127.0.0.1:44770
+99963:S 25 Mar 2022 11:03:36.575 * Before turning into a replica, using my own master parameters to synthesize a cached master: I may be able to synchronize with the new master with just a partial transfer.
+99963:S 25 Mar 2022 11:03:36.575 * Connecting to MASTER 127.0.0.1:7000
+99963:S 25 Mar 2022 11:03:36.576 * MASTER <-> REPLICA sync started
+99963:S 25 Mar 2022 11:03:36.576 * REPLICAOF 127.0.0.1:7000 enabled (user request from 'id=5 addr=127.0.0.1:44770 laddr=127.0.0.1:7001 fd=9 name= age=0 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=42 qbuf-free=40912 argv-mem=20 obl=0 oll=0 omem=0 tot-mem=61484 events=r cmd=slaveof user=default redir=-1')
+99963:S 25 Mar 2022 11:03:36.576 * Non blocking connect for SYNC fired the event.
+99963:S 25 Mar 2022 11:03:36.576 * Master replied to PING, replication can continue...
+99963:S 25 Mar 2022 11:03:36.576 - Client closed connection
+99963:S 25 Mar 2022 11:03:36.576 * Trying a partial resynchronization (request b3895c9e5d6b2d3a395d947be721c8cab473c20c:1).
+99963:S 25 Mar 2022 11:03:41.658 * Full resync from master: 198e5f0366ad7c64603c635bddb7f08a71b0520b:14
+99963:S 25 Mar 2022 11:03:41.658 * Discarding previously cached master state.
+99963:S 25 Mar 2022 11:03:41.659 * MASTER <-> REPLICA sync: receiving streamed RDB from master with EOF to disk
+99963:S 25 Mar 2022 11:03:41.659 * MASTER <-> REPLICA sync: Flushing old data
+99963:S 25 Mar 2022 11:03:41.659 * MASTER <-> REPLICA sync: Loading DB in memory
+99963:S 25 Mar 2022 11:03:41.660 * Loading RDB produced by version 6.2.3
+99963:S 25 Mar 2022 11:03:41.660 * RDB age 0 seconds
+99963:S 25 Mar 2022 11:03:41.660 * RDB memory usage when created 1.79 Mb
+99963:S 25 Mar 2022 11:03:41.660 * MASTER <-> REPLICA sync: Finished with success
+99963:S 25 Mar 2022 11:03:41.660 * Background append only file rewriting started by pid 100087
+99963:S 25 Mar 2022 11:03:41.700 * AOF rewrite child asks to stop sending diffs.
+100087:C 25 Mar 2022 11:03:41.700 * Parent agreed to stop sending diffs. Finalizing AOF...
+100087:C 25 Mar 2022 11:03:41.700 * Concatenating 0.00 MB of AOF diff received from parent.
+100087:C 25 Mar 2022 11:03:41.701 * SYNC append only file rewrite performed
+100087:C 25 Mar 2022 11:03:41.701 * AOF rewrite: 0 MB of memory used by copy-on-write
+99963:S 25 Mar 2022 11:03:41.776 * Background AOF rewrite terminated with success
+99963:S 25 Mar 2022 11:03:41.776 * Residual parent diff successfully flushed to the rewritten AOF (0.00 MB)
+99963:S 25 Mar 2022 11:03:41.776 * Background AOF rewrite finished successfully
+99963:S 25 Mar 2022 11:03:41.776 - Background AOF rewrite signal handler took 148us
+99963:S 25 Mar 2022 11:04:15.414 - Accepted 127.0.0.1:44774
+99963:S 25 Mar 2022 11:04:15.416 - Client closed connection
+99963:S 25 Mar 2022 11:05:33.296 - Accepted 127.0.0.1:44794
+99963:S 25 Mar 2022 11:05:33.297 - Accepted 127.0.0.1:44796
+99963:S 25 Mar 2022 11:05:33.307 - Accepted 127.0.0.1:44798
+99963:S 25 Mar 2022 11:05:33.307 - Accepted 127.0.0.1:44800
+99963:S 25 Mar 2022 11:05:33.316 - Accepted 127.0.0.1:44802
+99963:S 25 Mar 2022 11:05:33.316 - Accepted 127.0.0.1:44804
+99963:S 25 Mar 2022 11:05:38.918 - Accepted 127.0.0.1:44818
+99963:S 25 Mar 2022 11:05:38.919 - Client closed connection
+99963:M 25 Mar 2022 11:09:38.739 # Connection with master lost.
+99963:M 25 Mar 2022 11:09:38.739 * Caching the disconnected master state.
+99963:M 25 Mar 2022 11:09:38.739 * Discarding previously cached master state.
+99963:M 25 Mar 2022 11:09:38.739 # Setting secondary replication ID to 198e5f0366ad7c64603c635bddb7f08a71b0520b, valid up to offset: 48232. New replication ID is 20ef59ffb8b73962115f880a5a53fc7e0ff2a78f
+99963:M 25 Mar 2022 11:09:38.739 * MASTER MODE enabled (user request from 'id=9 addr=127.0.0.1:44794 laddr=127.0.0.1:7001 fd=8 name=sentinel-66fe58de-cmd age=245 idle=0 flags=x db=0 sub=0 psub=0 multi=4 qbuf=188 qbuf-free=40766 argv-mem=4 obl=45 oll=0 omem=0 tot-mem=61468 events=r cmd=exec user=default redir=-1')
+99963:M 25 Mar 2022 11:09:38.743 # CONFIG REWRITE executed with success.
+99963:M 25 Mar 2022 11:09:38.746 - Accepted 127.0.0.1:44836
+99963:M 25 Mar 2022 11:09:38.746 - Accepted 127.0.0.1:44838
+99963:M 25 Mar 2022 11:09:38.757 - Accepted 127.0.0.1:44840
+99963:M 25 Mar 2022 11:09:38.757 - Accepted 127.0.0.1:44842
+99963:M 25 Mar 2022 11:09:38.807 - Accepted 127.0.0.1:44844
+99963:M 25 Mar 2022 11:09:39.685 - Client closed connection
+99963:M 25 Mar 2022 11:09:39.685 - Client closed connection
+99963:M 25 Mar 2022 11:09:39.688 - Client closed connection
+99963:M 25 Mar 2022 11:09:39.688 - Client closed connection
+99963:M 25 Mar 2022 11:09:39.688 - Client closed connection
+99963:M 25 Mar 2022 11:09:39.688 - Client closed connection
+99963:M 25 Mar 2022 11:09:39.710 - Accepted 127.0.0.1:44846
+99963:M 25 Mar 2022 11:09:39.710 - Accepted 127.0.0.1:44848
+99963:M 25 Mar 2022 11:09:39.727 - Accepted 127.0.0.1:44854
+99963:M 25 Mar 2022 11:09:39.727 - Accepted 127.0.0.1:44856
+99963:M 25 Mar 2022 11:09:39.744 - Accepted 127.0.0.1:44862
+99963:M 25 Mar 2022 11:09:39.744 - Accepted 127.0.0.1:44864
+99963:M 25 Mar 2022 11:10:58.243 - Accepted 127.0.0.1:44934
+99963:M 25 Mar 2022 11:10:58.243 - Client closed connection
+99963:M 25 Mar 2022 11:12:55.983 - Accepted 127.0.0.1:45024
+99963:M 25 Mar 2022 11:12:55.984 - Client closed connection
+99963:M 25 Mar 2022 11:15:59.609 - Accepted 127.0.0.1:45182
+99963:M 25 Mar 2022 11:15:59.612 * Replica 127.0.0.1:7000 asks for synchronization
+99963:M 25 Mar 2022 11:15:59.612 * Partial resynchronization not accepted: Requested offset for second ID was 463900, but I can reply up to 48232
+99963:M 25 Mar 2022 11:15:59.612 * Delay next BGSAVE for diskless SYNC
+99963:M 25 Mar 2022 11:16:04.785 * Starting BGSAVE for SYNC with target: replicas sockets
+99963:M 25 Mar 2022 11:16:04.786 * Background RDB transfer started by pid 101045
+101045:C 25 Mar 2022 11:16:04.786 * RDB: 0 MB of memory used by copy-on-write
+99963:M 25 Mar 2022 11:16:04.786 # Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+99963:M 25 Mar 2022 11:16:04.787 * Background RDB transfer terminated with success
+99963:M 25 Mar 2022 11:16:04.787 * Streamed RDB transfer with replica 127.0.0.1:7000 succeeded (socket). Waiting for REPLCONF ACK from slave to enable streaming
+99963:M 25 Mar 2022 11:16:04.787 * Synchronization with replica 127.0.0.1:7000 succeeded

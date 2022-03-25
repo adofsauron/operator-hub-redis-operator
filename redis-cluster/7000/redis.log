@@ -1,0 +1,30 @@
+24615:C 24 Mar 2022 16:28:10.294 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+24615:C 24 Mar 2022 16:28:10.294 # Redis version=6.2.3, bits=64, commit=00000000, modified=0, pid=24615, just started
+24615:C 24 Mar 2022 16:28:10.294 # Configuration loaded
+24615:M 24 Mar 2022 16:28:10.294 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+24615:M 24 Mar 2022 16:28:10.294 * monotonic clock: POSIX clock_gettime
+24615:M 24 Mar 2022 16:28:10.295 * Running mode=standalone, port=7000.
+24615:M 24 Mar 2022 16:28:10.295 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+24615:M 24 Mar 2022 16:28:10.295 # Server initialized
+24615:M 24 Mar 2022 16:28:10.295 * Ready to accept connections
+24615:M 24 Mar 2022 16:28:10.295 * The server is now ready to accept connections at ./redis.sock
+24615:M 24 Mar 2022 16:28:35.889 - Accepted ::1:54542
+24615:M 24 Mar 2022 16:28:35.889 * Replica [::1]:7001 asks for synchronization
+24615:M 24 Mar 2022 16:28:35.889 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for 'd254c8437668fabe34bfb5b1c3a089035795684e', my replication IDs are 'bc3ba03897a100124fd040c644d2e6887a3ab5f6' and '0000000000000000000000000000000000000000')
+24615:M 24 Mar 2022 16:28:35.889 * Replication backlog created, my new replication IDs are '1e37e346053088c9471830857bd3a8d792242f5e' and '0000000000000000000000000000000000000000'
+24615:M 24 Mar 2022 16:28:35.889 * Delay next BGSAVE for diskless SYNC
+24615:M 24 Mar 2022 16:28:40.528 * Starting BGSAVE for SYNC with target: replicas sockets
+24615:M 24 Mar 2022 16:28:40.529 * Background RDB transfer started by pid 24700
+24700:C 24 Mar 2022 16:28:40.529 * RDB: 0 MB of memory used by copy-on-write
+24615:M 24 Mar 2022 16:28:40.529 # Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+24615:M 24 Mar 2022 16:28:40.533 * Background RDB transfer terminated with success
+24615:M 24 Mar 2022 16:28:40.533 * Streamed RDB transfer with replica [::1]:7001 succeeded (socket). Waiting for REPLCONF ACK from slave to enable streaming
+24615:M 24 Mar 2022 16:28:40.533 * Synchronization with replica [::1]:7001 succeeded
+24615:M 24 Mar 2022 16:33:09.950 - Accepted 127.0.0.1:38260
+24615:M 24 Mar 2022 16:33:09.950 - Accepted 127.0.0.1:38262
+24615:signal-handler (1648110827) Received SIGTERM scheduling shutdown...
+24615:M 24 Mar 2022 16:33:47.337 # User requested shutdown...
+24615:M 24 Mar 2022 16:33:47.337 * Calling fsync() on the AOF file.
+24615:M 24 Mar 2022 16:33:47.337 * Removing the pid file.
+24615:M 24 Mar 2022 16:33:47.338 * Removing the unix socket file.
+24615:M 24 Mar 2022 16:33:47.338 # Redis is now ready to exit, bye bye...
