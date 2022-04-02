@@ -118,9 +118,6 @@
     <ClCompile Include="..\..\tst\WatcherTest.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\src\CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\etcd\Client.hpp" />
     <ClInclude Include="..\..\etcd\KeepAlive.hpp" />
     <ClInclude Include="..\..\etcd\Response.hpp" />

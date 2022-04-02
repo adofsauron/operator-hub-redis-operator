@@ -143,11 +143,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\src\CMakeLists.txt">
-      <Filter>src</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\etcd\Client.hpp">
       <Filter>etcd</Filter>
     </ClInclude>
