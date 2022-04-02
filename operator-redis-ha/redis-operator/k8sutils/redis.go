@@ -6,6 +6,7 @@ import (
 	"errors"
 	"fmt"
 	"net"
+	"strconv"
 	"strings"
 
 	"github.com/go-logr/logr"
@@ -15,6 +16,13 @@ import (
 	"k8s.io/client-go/tools/remotecommand"
 
 	appsv1alpha1 "redis-operator/api/v1alpha1"
+	"redis-operator/ctlconfig"
+)
+
+const (
+	ETCD_FILE_CERT   = "/usr/bin/etcd-client.crt"
+	ETCD_FILE_KEY    = "/usr/bin/etcd-key.crt"
+	ETCD_FILE_CACERT = "/usr/bin/etcd-ca.crt"
 )
 
 type RedisDetails struct {
@@ -132,6 +140,30 @@ func ExecuteRedisCreateHA(cr *appsv1alpha1.OperatorRedisHA) error {
 		err := errors.New("ExecuteRedisCreateHA fail, out not ok")
 		logger.Error(err, fmt.Sprintf("ExecuteRedisCreateHA fail, out not ok, out: %s", out))
 		return err
+	}
+
+	return nil
+}
+
+func ExecuteRedisSetEtcdCrd(cr *appsv1alpha1.OperatorRedisHA) error {
+	logger := generateRedisManagerLogger(cr.Namespace, cr.ObjectMeta.Name)
+
+	cfg := ctlconfig.GetconfigParam()
+
+	cmd := []string{}
+	cmd = append(cmd, "echo", cfg.ETCD_VALUE_CERT, ">", ETCD_FILE_CERT)
+	// cmd = append(cmd, "echo", cfg.ETCD_VALUE_KEY, ">", ETCD_FILE_KEY, ";")
+	// cmd = append(cmd, "echo", cfg.ETCD_VALUE_CACERT, ">", ETCD_FILE_CACERT)
+
+	logger.Info(fmt.Sprintf("ExecuteRedisSetEtcdCrd cmd: %s", cmd))
+
+	for i := 0; i <= 1; i++ {
+		podName := cr.ObjectMeta.Name + "-" + strconv.Itoa(i)
+		_, err := executeCommand(cr, cmd, podName)
+		if nil != err {
+			logger.Error(err, fmt.Sprintf("ExecuteRedisSetEtcdCrd fail, executeCommand err: %v", err))
+			return err
+		}
 	}
 
 	return nil

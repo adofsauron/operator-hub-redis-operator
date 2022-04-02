@@ -88,6 +88,8 @@ func (r *OperatorRedisHAReconciler) ReconcileHandleInstance(ctx context.Context,
 		return r.ReconcileCheckService(ctx, req, cr)
 	case STATUS_IN_CREATE_SERVICE:
 		return r.ReconcileInCreateService(ctx, req, cr)
+	case STATUS_IN_SET_ETCD_CRT:
+		return r.ReconcileSetEtcdCrt(ctx, req, cr)
 	case STATUS_IN_CHECK_REDIS_HA:
 		return r.ReconcileCheckRedisHA(ctx, req, cr)
 	case STATUS_IN_CREATE_REDIS_HA:
@@ -237,6 +239,32 @@ func (r *OperatorRedisHAReconciler) ReconcileCheckRedisHA(ctx context.Context, r
 		err := r.Status().Update(ctx, cr)
 		if nil != err {
 			r.Logger.Error(err, fmt.Sprintf("ReconcileInCreateService Update fail, err: %v", err))
+			return ctrl.Result{RequeueAfter: time.Second * TIME_INTERVAL_EVENT}, nil
+		}
+	}
+
+	return ctrl.Result{}, nil
+}
+
+func (r *OperatorRedisHAReconciler) ReconcileSetEtcdCrt(ctx context.Context, req ctrl.Request, cr *appsv1alpha1.OperatorRedisHA) (ctrl.Result, error) {
+
+	if !cr.Status.BeSetEtcdCrt {
+		err := k8sutils.ExecuteRedisSetEtcdCrd(cr)
+		if nil != err {
+			r.Logger.Error(err, fmt.Sprintf("ReconcileSetEtcdCrt fail, ExecuteRedisSetEtcdCrd err: %v", err))
+			return ctrl.Result{RequeueAfter: time.Second * TIME_INTERVAL_EVENT}, nil
+		}
+
+		cr.Status.BeSetEtcdCrt = true
+		cr.Status.CRStatus = STATUS_IN_CHECK_REDIS_HA
+	} else {
+		cr.Status.CRStatus = STATUS_IN_CHECK_REDIS_HA
+	}
+
+	{
+		err := r.Status().Update(ctx, cr)
+		if nil != err {
+			r.Logger.Error(err, fmt.Sprintf("ReconcileSetEtcdCrt Update fail, err: %v", err))
 			return ctrl.Result{RequeueAfter: time.Second * TIME_INTERVAL_EVENT}, nil
 		}
 	}

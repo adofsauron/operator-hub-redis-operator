@@ -31,6 +31,7 @@ import (
 
 	appsv1alpha1 "redis-operator/api/v1alpha1"
 	"redis-operator/controllers"
+	"redis-operator/ctlconfig"
 )
 
 var (
@@ -92,6 +93,8 @@ func main() {
 		setupLog.Error(err, "unable to set up ready check")
 		os.Exit(1)
 	}
+
+	ctlconfig.LoadconfigParam()
 
 	setupLog.Info("starting manager")
 	if err := mgr.Start(ctrl.SetupSignalHandler()); err != nil {

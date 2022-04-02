@@ -57,10 +57,11 @@ type OperatorRedisHAStatus struct {
 	// insert ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 
-	CRStatus  int    `json:"crStatus,omitempty"`
-	BeSlaveOf bool   `json:"beSlaveOf,omitempty"`
-	RedisAddr string `json:"redisAddr,omitempty"`
-	RedisPort int    `json:"redisPort,omitempty"`
+	CRStatus     int    `json:"crStatus,omitempty"`
+	BeSlaveOf    bool   `json:"beSlaveOf,omitempty"`
+	RedisAddr    string `json:"redisAddr,omitempty"`
+	BeSetEtcdCrt bool   `json:"beSetEtcdCrt,omitempty"`
+	RedisPort    int    `json:"redisPort,omitempty"`
 }
 
 //+kubebuilder:object:root=true

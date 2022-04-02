@@ -14,6 +14,7 @@ const (
 	STATUS_IN_FIX_REDIS_SERVER = 10 // 修复redis-server进程异常
 	STATUS_IN_FORCE_REDO_POD   = 11 // pod使用了localpv出现异常无法自动调度, 强行调度pod
 	STATUS_IN_CHECK_NORMAL     = 12 // 正常的心跳检测
+	STATUS_IN_SET_ETCD_CRT     = 13 // 设置etcd的crt
 )
 
 const (
