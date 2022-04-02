@@ -219,4 +219,3 @@ func CreatekService(cr *redisv1alpha1.OperatorRedisHA) error {
 	return createService(cr.Namespace, serviceDef)
 
 }
-

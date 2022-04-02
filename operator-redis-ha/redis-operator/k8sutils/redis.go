@@ -15,7 +15,6 @@ import (
 	"k8s.io/client-go/tools/remotecommand"
 
 	appsv1alpha1 "redis-operator/api/v1alpha1"
-
 )
 
 type RedisDetails struct {
