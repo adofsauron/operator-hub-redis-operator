@@ -18,6 +18,25 @@ make install
 cd ..
 # rm protobuf-cpp-3.20.0 -rf
 
+# grpc
+
+cd $HERE
+
+cd third_party
+rm grpc -rf
+tar -xzvf grpc.tar.gz
+
+cd grpc
+mkdir -p build
+cd build
+cmake ..
+make -j"$(nproc)"
+make install
+
+cd ../..
+# rm grpc -rf
+
+
 # libgo
 
 cd $HERE
