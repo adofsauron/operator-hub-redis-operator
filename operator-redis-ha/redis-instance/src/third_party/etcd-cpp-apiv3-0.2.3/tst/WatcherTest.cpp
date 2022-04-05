@@ -43,6 +43,7 @@ TEST_CASE("create watcher with cancel")
   std::this_thread::sleep_for(std::chrono::seconds(3));
   etcd.set("/test/key", "42");
   etcd.set("/test/key", "43");
+  etcd.add("/test/key", "43", 3);
   etcd.rm("/test/key");
   etcd.set("/test/key", "44");
   std::this_thread::sleep_for(std::chrono::seconds(3));
