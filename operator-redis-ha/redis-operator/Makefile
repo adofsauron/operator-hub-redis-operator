@@ -63,10 +63,12 @@ test: manifests generate fmt vet envtest ## Run tests.
 
 .PHONY: build
 build: generate vet ## Build manager binary.
+	export GOPROXY=https://goproxy.cn,direct
 	go build -gcflags=all="-N -l" -o bin/manager main.go
 
 .PHONY: run
 run: manifests generate vet ## Run a controller from your host.
+	export GOPROXY=https://goproxy.cn,direct
 	go run -gcflags=all="-N -l" ./main.go
 
 .PHONY: docker-build
