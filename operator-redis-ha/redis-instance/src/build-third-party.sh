@@ -27,6 +27,7 @@ rm grpc -rf
 tar -xzvf grpc.tar.gz
 
 cd grpc
+rm ./build -rf
 mkdir -p build
 cd build
 cmake ..
