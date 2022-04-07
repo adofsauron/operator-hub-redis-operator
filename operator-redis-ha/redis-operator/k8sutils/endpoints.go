@@ -11,8 +11,8 @@ import (
 )
 
 const (
-	NS_KUBE_SYSTEM       = "default"
-	SVC_KUBE_SYSTEM_ETCD = "redis-ha-sample"
+	NS_KUBE_SYSTEM       = "kube-system"
+	SVC_KUBE_SYSTEM_ETCD = "coc-kube-etcd"
 )
 
 func epLogger(namespace string, name string) logr.Logger {

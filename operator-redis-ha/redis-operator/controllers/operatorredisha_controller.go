@@ -66,11 +66,6 @@ func (r *OperatorRedisHAReconciler) ReconcileHandleInstance(ctx context.Context,
 
 	r.Logger.Info(fmt.Sprintf("ReconcileHandleStatus::Reconcile CRStatus: %d\n", cr.Status.CRStatus))
 
-	_, err := k8sutils.GetKubeSystemEtcdEndpoints()
-	if nil != err {
-		r.Logger.Error(err, "GetKubeSystemEtcdSVC err")
-	}
-
 	switch cr.Status.CRStatus {
 	case STATUS_ON_START:
 		return r.ReconcileCheckSts(ctx, req, cr)
@@ -189,7 +184,7 @@ func (r *OperatorRedisHAReconciler) ReconcileCheckService(ctx context.Context, r
 	if !isServiceExist {
 		cr.Status.CRStatus = STATUS_IN_CREATE_SERVICE
 	} else {
-		cr.Status.CRStatus = STATUS_IN_CHECK_REDIS_HA
+		cr.Status.CRStatus = STATUS_IN_SET_ETCD_CRT
 	}
 
 	{
@@ -216,7 +211,7 @@ func (r *OperatorRedisHAReconciler) ReconcileInCreateService(ctx context.Context
 		cr.Status.RedisAddr = cr.Name + "." + cr.Namespace + ".svc.cluster.local" // 创建完service后即开发连接
 		cr.Status.RedisPort = 6379
 
-		cr.Status.CRStatus = STATUS_IN_CHECK_REDIS_HA
+		cr.Status.CRStatus = STATUS_IN_SET_ETCD_CRT
 		err := r.Status().Update(ctx, cr)
 		if nil != err {
 			r.Logger.Error(err, fmt.Sprintf("ReconcileInCreateService Update fail, err: %v", err))

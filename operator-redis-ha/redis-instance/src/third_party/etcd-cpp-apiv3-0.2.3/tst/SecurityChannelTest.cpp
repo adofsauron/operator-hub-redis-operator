@@ -11,7 +11,8 @@ static std::string key = "security-config/private/etcd0.example.com.key";
 
 TEST_CASE("setup with auth")
 {
-  etcd::Client *etcd = etcd::Client::WithSSL("https://127.0.0.1:2379", ca, cert, key);
+  // etcd::Client *etcd = etcd::Client::WithSSL("https://127.0.0.1:2379", ca, cert, key);
+  etcd::Client *etcd = (etcd::Client *) etcd_Client_WithSSL("https://127.0.0.1:2379", ca.c_str(), cert.c_str(), key.c_str());
   etcd->rmdir("/test", true).wait();
 }
 

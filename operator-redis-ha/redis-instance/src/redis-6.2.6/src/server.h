@@ -35,6 +35,7 @@
 #include "solarisfixes.h"
 #include "rio.h"
 #include "atomicvar.h"
+#include "etcd_link.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -1624,6 +1625,14 @@ struct redisServer {
                                 * failover then any replica can be used. */
     int target_replica_port; /* Failover target port */
     int failover_state; /* Failover state */
+
+    // etcd
+    char* etcd_addr;
+    char* etcd_cert;
+    char* etcd_key;
+    char* etcd_cacer;
+
+    etcdLinkClient* etcdClient;
 };
 
 #define MAX_KEYS_BUFFER 256

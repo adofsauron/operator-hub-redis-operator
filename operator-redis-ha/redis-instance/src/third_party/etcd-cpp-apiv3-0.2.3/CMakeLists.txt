@@ -120,6 +120,7 @@ add_subdirectory(src)
 add_subdirectory(tst)
 
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/etcd/Client.hpp
+               ${CMAKE_CURRENT_SOURCE_DIR}/etcd/client_c.h
                ${CMAKE_CURRENT_SOURCE_DIR}/etcd/KeepAlive.hpp
                ${CMAKE_CURRENT_SOURCE_DIR}/etcd/SyncClient.hpp
                ${CMAKE_CURRENT_SOURCE_DIR}/etcd/Response.hpp

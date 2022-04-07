@@ -28,6 +28,7 @@
 #include "proto/v3election.grpc.pb.h"
 
 #include "etcd/Client.hpp"
+#include "etcd/client_c.h"
 #include "etcd/KeepAlive.hpp"
 #include "etcd/v3/action_constants.hpp"
 #include "etcd/v3/Action.hpp"
@@ -1055,4 +1056,37 @@ etcd::Client::Observer::~Observer() {
     action->CancelObserve();
     resp.wait();
   }
+}
+
+void* etcd_Client_WithSSL(const char* etcd_url,
+                                    const char* ca,
+                                    const char* cert,
+                                    const char* key)
+{
+  return etcd::Client::WithSSL(etcd_url, ca, cert, key);
+}
+
+void* etcd_Client_WithUrl(const char* etcd_url)
+{
+  return etcd::Client::WithUrl(etcd_url);
+}
+
+int etcd_add(void* etcd, const char* key, const char* value, int ttl)
+{
+  etcd::Client* _etcd = (etcd::Client*)(etcd);
+  etcd::Response resp = _etcd->add(key, value, ttl).get();
+  return resp.error_code();
+}
+
+int etcd_rmdir(void* etcd, const char* dir)
+{
+  etcd::Client* _etcd = (etcd::Client*)(etcd);
+  return (int) _etcd->rmdir(dir, true).wait();;
+}
+
+int etcd_set(void* etcd, const char* key, const char* value, int ttl)
+{
+  etcd::Client* _etcd = (etcd::Client*)(etcd);
+  etcd::Response resp = _etcd->set(key, value, ttl).get();
+  return resp.error_code();
 }

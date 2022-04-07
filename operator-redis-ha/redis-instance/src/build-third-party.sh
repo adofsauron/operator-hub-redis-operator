@@ -30,6 +30,7 @@ cd grpc
 rm ./build -rf
 mkdir -p build
 cd build
+
 cmake ..
 make -j"$(nproc)"
 make install
@@ -62,22 +63,22 @@ rm libgo-3.1-stable -rf
 
 # log4cpp
 
-cd third_party
-rm log4cpp-2.9.1 -rf
-tar -xzvf log4cpp-2.9.1.tar.gz
+# cd third_party
+# rm log4cpp-2.9.1 -rf
+# tar -xzvf log4cpp-2.9.1.tar.gz
 
-cd log4cpp-2.9.1
+# cd log4cpp-2.9.1
 
-rm ./build -rf
-mkdir -p ./build
-cd ./build
+# rm ./build -rf
+# mkdir -p ./build
+# cd ./build
 
-cmake ..
+# cmake ..
 
-make -j"$(nproc)"
-make install
+# make -j"$(nproc)"
+# make install
 
-cd ../..
+# cd ../..
 # rm log4cpp-2.9.1 -rf
 
 # cpprst
@@ -118,9 +119,26 @@ cmake ..
 
 make -j"$(nproc)"
 make install
+cp ./src/libetcd-cpp-api.so  /lib64/ -rf
 
 cd ../..
 # rm ./etcd-cpp-apiv3-0.2.3 -rf
+
+# etcd for debug
+
+# cd third_party
+# rm etcd-3.6.0-alpha.0 -rf
+# tar -xzvf etcd-3.6.0-alpha.0.tar.gz
+# cd etcd-3.6.0-alpha.0
+
+# go env -w GOPROXY=https://goproxy.cn,direct
+# cd etcdctl
+# go mod tidy
+# go mod vendor
+# go build -o etcdctl ./main.go
+# cp ./bin/*  /usr/bin/ -rf
+
+# cd ..
 
 # over 
 

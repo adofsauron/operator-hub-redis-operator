@@ -8,6 +8,7 @@ import (
 	"net"
 	"strconv"
 	"strings"
+	"encoding/base64"
 
 	"github.com/go-logr/logr"
 	corev1 "k8s.io/api/core/v1"
@@ -150,10 +151,18 @@ func ExecuteRedisSetEtcdCrd(cr *appsv1alpha1.OperatorRedisHA) error {
 
 	cfg := ctlconfig.GetconfigParam()
 
+	strbytes_cert := []byte(cfg.ETCD_VALUE_CERT)
+	encoded_ceret := base64.StdEncoding.EncodeToString(strbytes_cert)
+
+	strbytes_key := []byte(cfg.ETCD_VALUE_KEY)
+	encoded_key := base64.StdEncoding.EncodeToString(strbytes_key)
+
+	strbytes_cacert := []byte(cfg.ETCD_VALUE_CACERT)
+	encoded_caceret := base64.StdEncoding.EncodeToString(strbytes_cacert)
+
+
 	cmd := []string{}
-	cmd = append(cmd, "echo", cfg.ETCD_VALUE_CERT, ">", ETCD_FILE_CERT)
-	// cmd = append(cmd, "echo", cfg.ETCD_VALUE_KEY, ">", ETCD_FILE_KEY, ";")
-	// cmd = append(cmd, "echo", cfg.ETCD_VALUE_CACERT, ">", ETCD_FILE_CACERT)
+	cmd = append(cmd, "/usr/bin/etcd-save-crt.sh", encoded_ceret, encoded_key, encoded_caceret)
 
 	logger.Info(fmt.Sprintf("ExecuteRedisSetEtcdCrd cmd: %s", cmd))
 

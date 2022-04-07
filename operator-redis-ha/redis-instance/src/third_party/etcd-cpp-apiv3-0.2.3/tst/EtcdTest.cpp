@@ -6,33 +6,37 @@
 #include <thread>
 
 #include "etcd/Client.hpp"
+#include "etcd/client_c.h"
 
 
 TEST_CASE("setup")
 {
-  etcd::Client etcd("http://127.0.0.1:2379");
-  etcd.rmdir("/test", true).wait();
+  etcd::Client* etcd = (etcd::Client*) etcd_Client_WithUrl("http://127.0.0.1:2379");
+  etcd->rmdir("/test", true).wait();
 }
 
 TEST_CASE("add a new key")
 {
-  etcd::Client etcd("http://127.0.0.1:2379");
-  etcd.rmdir("/test", true).wait();
-  etcd::Response resp = etcd.add("/test/key1", "42").get();
+  // etcd::Client etcd("http://127.0.0.1:2379");
+  etcd::Client* etcd = (etcd::Client*) etcd_Client_WithUrl("http://127.0.0.1:2379");
+  etcd->rmdir("/test", true).wait();
+  etcd::Response resp = etcd->add("/test/key1", "48").get();
   REQUIRE(0 == resp.error_code());
   CHECK("create" == resp.action());
   etcd::Value const & val = resp.value();
-  CHECK("42" == val.as_string());
+  CHECK("48" == val.as_string());
   CHECK("/test/key1" == val.key());
   CHECK(!val.is_dir());
   CHECK(0 < val.created_index());
   CHECK(0 < val.modified_index());
   CHECK(1 == val.version());
   CHECK(0 < resp.index());
-  CHECK(etcd::ERROR_KEY_ALREADY_EXISTS == etcd.add("/test/key1", "43").get().error_code()); // Key already exists
-  CHECK(etcd::ERROR_KEY_ALREADY_EXISTS == etcd.add("/test/key1", "42").get().error_code()); // Key already exists
-  CHECK("Key already exists" == etcd.add("/test/key1", "42").get().error_message());
+  CHECK(etcd::ERROR_KEY_ALREADY_EXISTS == etcd->add("/test/key1", "43").get().error_code()); // Key already exists
+  CHECK(etcd::ERROR_KEY_ALREADY_EXISTS == etcd->add("/test/key1", "47").get().error_code()); // Key already exists
+  CHECK("Key already exists" == etcd->add("/test/key1", "47").get().error_message());
 }
+
+#if 0
 
 TEST_CASE("read a value from etcd")
 {
@@ -524,3 +528,5 @@ TEST_CASE("cleanup")
   etcd::Client etcd("http://127.0.0.1:2379");
   REQUIRE(0 == etcd.rmdir("/test", true).get().error_code());
 }
+
+#endif // 0

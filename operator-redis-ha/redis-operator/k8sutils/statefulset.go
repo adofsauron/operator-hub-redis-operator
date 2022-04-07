@@ -2,7 +2,6 @@ package k8sutils
 
 import (
 	"context"
-	"encoding/base64"
 	"fmt"
 	"sort"
 
@@ -14,7 +13,6 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 	redisv1alpha1 "redis-operator/api/v1alpha1"
-	"redis-operator/ctlconfig"
 )
 
 const (
@@ -307,7 +305,10 @@ func getEnvironmentVariables(role string, enabledPassword *bool, secretName *str
 	}
 
 	// etcd addr
-	etcdAddr, err := GetKubeSystemEtcdEndpoints()
+	// TODO 
+	// etcdAddr, err := GetKubeSystemEtcdEndpoints()
+	etcdAddr := "192.168.58.201:2379,192.168.58.201:2379"
+	var err error 
 	if nil != err {
 		logger.Error(err, fmt.Sprintf("GetKubeSystemEtcdEndpoints err: %v", err))
 	} else {
@@ -316,29 +317,6 @@ func getEnvironmentVariables(role string, enabledPassword *bool, secretName *str
 			Value: etcdAddr,
 		})
 	}
-
-	// etcd crt
-	cfg := ctlconfig.GetconfigParam()
-
-	strbytes_cert := []byte(cfg.ETCD_VALUE_CERT)
-	encoded_ceret := base64.StdEncoding.EncodeToString(strbytes_cert)
-
-	strbytes_key := []byte(cfg.ETCD_VALUE_KEY)
-	encoded_key := base64.StdEncoding.EncodeToString(strbytes_key)
-
-	strbytes_cacert := []byte(cfg.ETCD_VALUE_CACERT)
-	encoded_caceret := base64.StdEncoding.EncodeToString(strbytes_cacert)
-
-	envVars = append(envVars, corev1.EnvVar{
-		Name:  "ETCD_CERT",
-		Value: encoded_ceret,
-	}, corev1.EnvVar{
-		Name:  "ETCD_KEY",
-		Value: encoded_key,
-	}, corev1.EnvVar{
-		Name:  "ETCD_CACERT",
-		Value: encoded_caceret,
-	})
 
 	redisHost := "redis://localhost:6379"
 	envVars = append(envVars, corev1.EnvVar{

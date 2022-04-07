@@ -4,7 +4,7 @@ FROM harbor.ceclouddyn.com/baseos/centos:8.4.2105-0.0.1 as builder
 ADD ./src/third_party /build/third_party
 ADD ./src/build-third-party.sh /build/build-third-party.sh
 
-RUN yum install gcc gcc-c++ tini make cmake dos2unix openssl-devel boost-devel -y && \
+RUN yum install gcc gcc-c++ tini make cmake dos2unix openssl-devel boost-devel lrzsz which -y && \
     cd /build && \
     bash build-third-party.sh 
 

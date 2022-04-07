@@ -35,6 +35,7 @@
 #include "latency.h"
 #include "atomicvar.h"
 #include "mt19937-64.h"
+#include "etcd_link.h"
 
 #include <time.h>
 #include <signal.h>
@@ -2265,6 +2266,10 @@ int serverCron(struct aeEventLoop *eventLoop, long long id, void *clientData) {
     moduleFireServerEvent(REDISMODULE_EVENT_CRON_LOOP,
                           0,
                           &ei);
+
+    run_with_period(100) {
+        etcdLinkCron(&server);
+    };
 
     server.cronloops++;
     return 1000/server.hz;

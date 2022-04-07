@@ -5,7 +5,7 @@ metadata:
 spec:
   kubernetesConfig:
     namespace: default
-    image: harbor.ceclouddyn.com/paas/operator-redis-ha-instance:0.0.39
+    image: harbor.ceclouddyn.com/paas/operator-redis-ha-instance:0.0.51
     imagePullPolicy: IfNotPresent
     resources:
       requests:

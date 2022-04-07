@@ -607,6 +607,18 @@ void loadServerConfigFromString(char *config) {
                 }
                 queueSentinelConfig(argv+1,argc-1,linenum,lines[i]);
             }
+        } else if (!strcasecmp(argv[0],"etcd_addr") && argc == 2) {
+            zfree(server.etcd_addr);
+            server.etcd_addr = zstrdup(argv[1]);
+        } else if (!strcasecmp(argv[0],"etcd_cert") && argc == 2) {
+            zfree(server.etcd_cert);
+            server.etcd_cert = zstrdup(argv[1]);
+        } else if (!strcasecmp(argv[0],"etcd_key") && argc == 2) {
+            zfree(server.etcd_key);
+            server.etcd_key = zstrdup(argv[1]);
+        } else if (!strcasecmp(argv[0],"etcd_cacer") && argc == 2) {
+            zfree(server.etcd_cacer);
+            server.etcd_cacer = zstrdup(argv[1]);
         } else {
             err = "Bad directive or wrong number of arguments"; goto loaderr;
         }

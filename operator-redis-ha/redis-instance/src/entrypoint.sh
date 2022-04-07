@@ -9,6 +9,8 @@ touch /data/redis.log
 mkdir -p ./conf-redis
 mkdir -p ./conf-predixy
 
+bash /usr/bin/nginx-start.sh
+
 if [ ! -f "./conf-redis/redis.conf" ]; then
     cp /usr/bin/conf-redis/* ./conf-redis/
 fi
