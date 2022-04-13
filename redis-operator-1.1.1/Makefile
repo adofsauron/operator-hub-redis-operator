@@ -77,6 +77,12 @@ docker-build: deps-development
 shell: docker-build
 	docker run -ti --rm -v ~/.kube:/.kube:ro -v $(PWD):$(WORKDIR) -u $(UID):$(UID) --name $(SERVICE_NAME) -p $(PORT):$(PORT) $(REPOSITORY)-dev /bin/bash
 
+ctr:
+	go build -gcflags=all="-N -l" -o ctr ./cmd/redisoperator/main.go
+
+clean:
+	rm ctr -rf
+
 # Build redis-failover executable file
 .PHONY: build
 build: docker-build
