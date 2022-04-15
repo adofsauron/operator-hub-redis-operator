@@ -2,16 +2,18 @@
 package app
 
 import (
-	"github.com/spf13/cobra"
-	"github.com/spf13/pflag"
-	"k8s.io/component-base/version/verflag"
-	"k8s.io/klog"
 	"td-redis-operator/cmd/operator/app/config"
 	"td-redis-operator/cmd/operator/app/options"
 	"td-redis-operator/pkg/controller/redis/cluster"
 	"td-redis-operator/pkg/controller/redis/masterslave"
 	"td-redis-operator/pkg/controller/redis/standalone"
 	"td-redis-operator/pkg/controller/svc"
+
+	"github.com/spf13/cobra"
+	"github.com/spf13/pflag"
+	"k8s.io/component-base/version/verflag"
+	"k8s.io/klog"
+
 )
 
 // NewCommand returns app command
@@ -42,7 +44,7 @@ func NewCommand() *cobra.Command {
 func Run(cfg *config.Config, stopCh <-chan struct{}) error {
 	svcController := newServiceController(cfg)
 	//mysqlProxyController := newMysqlProxyController(cfg)
-	//redisStandaloneController := newRedisStandaloneController(cfg)
+	redisStandaloneController := newRedisStandaloneController(cfg)
 	redisStandbyController := newRedisStandbyController(cfg)
 	redisClusterController := newRedisClusterController(cfg)
 
@@ -54,7 +56,7 @@ func Run(cfg *config.Config, stopCh <-chan struct{}) error {
 
 	//go mysqlProxyController.Run(1, stopCh)
 
-	//go redisStandaloneController.Run(1, stopCh)
+	go redisStandaloneController.Run(1, stopCh)
 
 	go redisStandbyController.Run(1, stopCh)
 
