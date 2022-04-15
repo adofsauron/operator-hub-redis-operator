@@ -1,0 +1,25 @@
+kubeconfig: ~/.kube/config
+namespace: redis
+standbyimage: tongduncloud/redis-standby:0.8
+sentiimage: tongduncloud/sentinel-standby:latest
+clusterimage: tongduncloud/redis-cluster:0.2
+proxyimage: tongduncloud/predixy:1.0
+redissecret: 123
+vip: 10.0.0.1
+#storageclass:
+middlewares:
+  - common
+  #- luc
+luc: http://10.0.0.1:8088
+monitorimage: tongduncloud/redis-exporter:1.0
+logger:
+  loggertype: mysql
+  mysqladdr: 10.0.0.1:3306
+  mysqluser: dba
+  mysqlpass: 123
+  mysqldb: mon123
+mon:
+  ip: 10.0.0.1:3306
+  db: mon
+  user: dba
+  password: 123

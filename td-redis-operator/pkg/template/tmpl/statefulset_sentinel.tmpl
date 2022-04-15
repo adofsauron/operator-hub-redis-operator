@@ -1,0 +1,83 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    APPNAME: sentinel
+    CLUSTER: sentinel-{{ .Spec.App }}
+    DC: "{{ .Spec.DC }}"
+    ENV: "{{ .Spec.ENV }}"
+    RESOURCE_ID: sentinel-{{ .Spec.App }}
+  name: sentinel-{{ .Spec.App }}
+  namespace: {{ .Namespace }}
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      CLUSTER: sentinel-{{ .Spec.App }}
+  serviceName: sentinel-{{ .Spec.App }}
+  template:
+    metadata:
+      labels:
+        APPNAME: sentinel
+        CLUSTER: sentinel-{{ .Spec.App }}
+        DC: "{{ .Spec.DC }}"
+        ENV: "{{ .Spec.ENV }}"
+        RESOURCE_ID: sentinel-{{ .Spec.App }}
+    spec:
+      {{ if eq .Spec.ENV "production" -}}
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+               matchLabels:
+                  RESOURCE_ID: sentinel-{{ .Spec.App }}
+            topologyKey: kubernetes.io/hostname
+      {{- end }}
+      containers:
+      - env:
+        - name: APP_CLUSTER
+          value: {{ .Spec.App }}
+        - name: NAMESPACE
+          value: {{ .Namespace }}
+        image: "{{ .Spec.SentinelImage }}"
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          exec:
+            command:
+            - sh
+            - /usr/local/bin/check_sentinel_alive.sh
+          failureThreshold: 5
+          initialDelaySeconds: 30
+          periodSeconds: 60
+          successThreshold: 1
+          timeoutSeconds: 10
+        name: sentinel-{{ .Spec.App }}
+        ports:
+        - containerPort: 26379
+          name: sentinel-port
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 100m
+            memory: 128Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - name: config
+          mountPath: /home/admin/sentinel/.rediscfg
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+      - name: harbor-secret
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: config
+        configMap:
+          name: {{ .Name }}
+  updateStrategy:
+    type: OnDelete
