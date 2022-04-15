@@ -4,17 +4,19 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"os/exec"
+	"strconv"
+	"strings"
+	"td-redis-operator/pkg/apis/cache/v1alpha1"
+	"time"
+
 	"github.com/go-redis/redis"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	apiequality "k8s.io/apimachinery/pkg/api/equality"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/klog"
-	"os/exec"
-	"strconv"
-	"strings"
-	"td-redis-operator/pkg/apis/cache/v1alpha1"
-	"time"
+
 )
 
 var (
@@ -425,7 +427,7 @@ func (c *Controller) createRedisCluster(pods []*corev1.Pod, mp *v1alpha1.RedisCl
 					klog.Warningf("%s meet %s failed %v", pod.Name, p.Name, err)
 				}
 			}
-			//DELETE INVALID NODE
+			//delete INVALID NODE
 			forgetBadNode(pods, gps_ips, mp.Spec.Secret)
 		}
 		//NEED SCALE?
