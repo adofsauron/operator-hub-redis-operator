@@ -13,7 +13,7 @@ codegen:
 	go generate -v ./...
 
 ctr:
-	go build -o ctr ./cmd/operator
+	go build -gcflags=all="-N -l" -o ctr ./cmd/operator
 
 clean:
 	rm ./ctr -rf
