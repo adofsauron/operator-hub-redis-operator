@@ -13,7 +13,6 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/informers"
 	"k8s.io/client-go/kubernetes"
-	restclient "k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/client-go/util/homedir"
 )
@@ -44,9 +43,7 @@ func NewOptions() *Options {
 
 // AddFlags adds flags for ML options
 func (opt *Options) AddFlags(fs *pflag.FlagSet) {
-	kubehome := filepath.Join(homedir.HomeDir(), ".kube", "config")
-	// fs.StringVar(&opt.Kubeconfig, "kubeconfig", opt.Kubeconfig, "kubeconfig of cluster")
-	fs.StringVar(&opt.Kubeconfig, "kubeconfig", kubehome, "kubeconfig of cluster")
+	fs.StringVar(&opt.Kubeconfig, "kubeconfig", opt.Kubeconfig, "kubeconfig of cluster")
 	fs.StringVar(&opt.Namespace, "namespace", opt.Namespace, "namespace of operator, if empty, all namespaces will be watched")
 	fs.StringVar(&opt.MysqlSecret, "mysql-secret", opt.MysqlSecret, "secret for mysql")
 	fs.BoolVar(&opt.EnableHostEndpoint, "enable-host-endpoint", opt.EnableHostEndpoint, "enable host endpoint, only support calico cni")
@@ -55,20 +52,13 @@ func (opt *Options) AddFlags(fs *pflag.FlagSet) {
 
 // Config parse options to config of operator
 func (opt *Options) Config() (*config.Config, error) {
-
-	var restConfig *restclient.Config
-	var err error
-
 	if opt.Development {
-		restConfig, err = clientcmd.BuildConfigFromFlags("", opt.Kubeconfig)
-		if err != nil {
-			return nil, fmt.Errorf("could not load configuration: %s", err)
-		}
-	} else {
-		restConfig, err = clientcmd.BuildConfigFromFlags("", opt.Kubeconfig)
-		if err != nil {
-			return nil, fmt.Errorf("can't parse kubeconfig from (%v)", opt.Kubeconfig)
-		}
+		opt.Kubeconfig = filepath.Join(homedir.HomeDir(), ".kube", "config")
+	}
+
+	restConfig, err := clientcmd.BuildConfigFromFlags("", opt.Kubeconfig)
+	if err != nil {
+		return nil, fmt.Errorf("can't parse kubeconfig from (%v)", opt.Kubeconfig)
 	}
 
 	kubeClient, err := kubernetes.NewForConfig(restConfig)
